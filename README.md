@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
@@ -57,3 +58,7 @@ Start from [this point](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thomaswangio/gatsby-personal-starter-blog)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+=======
+# blog
+My blog
+>>>>>>> 61d4650726130b99b46378036dcd0de5242f591e
