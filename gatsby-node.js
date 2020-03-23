@@ -1,66 +1,167 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+/* eslint "no-console": "off" */
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+const path = require('path');
+const _ = require('lodash');
+const moment = require('moment');
+const siteConfig = require('./data/SiteConfig');
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  return graphql(
-    `
-      {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+  let slug;
+  if (node.internal.type === 'MarkdownRemark') {
+    const fileNode = getNode(node.parent);
+    const parsedFilePath = path.parse(fileNode.relativePath);
+    if (
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
+    ) {
+      if (
+        node.frontmatter.categories &&
+        node.frontmatter.categories.length > 0
+      ) {
+        slug = `/${node.frontmatter.categories[0]}/${_.kebabCase(
+          node.frontmatter.title,
+        )}/`;
+      } else {
+        slug = `/${_.kebabCase(node.frontmatter.title)}/`;
+      }
+    }
+
+    if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')) {
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug'))
+        slug = `/${_.kebabCase(node.frontmatter.slug)}/`;
+
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'date')) {
+        const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
+        if (!date.isValid)
+          console.warn(`WARNING: Invalid date.`, node.frontmatter);
+
+        createNodeField({
+          node,
+          name: 'fancyDate',
+          value: moment(date, siteConfig.dateFromFormat).format(
+            siteConfig.dateFancyFormat,
+          ),
+        });
+
+        createNodeField({
+          node,
+          name: 'fileName',
+          value: parsedFilePath.name,
+        });
+
+        createNodeField({ node, name: 'date', value: date.toISOString() });
+      }
+    }
+    createNodeField({ node, name: 'slug', value: slug });
+  }
+};
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const postPage = path.resolve('src/templates/post.jsx');
+  const tagPage = path.resolve('src/templates/tag.jsx');
+  const categoryPage = path.resolve('src/templates/category.jsx');
+  // Get a full list of markdown posts
+  const markdownQueryResult = await graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              tags
+              categories
+              date
             }
           }
         }
       }
-    `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
+    }
+  `);
+
+  if (markdownQueryResult.errors) {
+    console.error(markdownQueryResult.errors);
+    throw markdownQueryResult.errors;
+  }
+
+  const tagSet = new Set();
+  const categorySet = new Set();
+
+  const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+
+  // Sort posts
+  postsEdges.sort((postA, postB) => {
+    const dateA = moment(
+      postA.node.frontmatter.date,
+      siteConfig.dateFromFormat,
+    );
+
+    const dateB = moment(
+      postB.node.frontmatter.date,
+      siteConfig.dateFromFormat,
+    );
+
+    if (dateA.isBefore(dateB)) return 1;
+    if (dateB.isBefore(dateA)) return -1;
+
+    return 0;
+  });
+
+  // Post page creating
+  postsEdges.forEach((edge, index) => {
+    // Generate a list of tags
+    if (edge.node.frontmatter.tags) {
+      edge.node.frontmatter.tags.forEach(tag => {
+        tagSet.add(tag);
+      });
     }
 
-    // Create blog posts pages.
-    const posts = result.data.allMdx.edges
+    // Create post pages
+    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
+    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
+    const nextEdge = postsEdges[nextID];
+    const prevEdge = postsEdges[prevID];
+    const postsSlug = edge.node.fields.slug;
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+    // Generate a list of categories
+    if (edge.node.frontmatter.categories.length > 0) {
+      edge.node.frontmatter.categories.forEach(category => {
+        categorySet.add(category);
+      });
+    }
 
-      createPage({
-        path: `blog${post.node.fields.slug}`,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
-    })
+    createPage({
+      path: postsSlug,
+      component: postPage,
+      context: {
+        slug: postsSlug,
+        nexttitle: nextEdge.node.frontmatter.title,
+        nextslug: nextEdge.node.fields.slug,
+        prevtitle: prevEdge.node.frontmatter.title,
+        prevslug: prevEdge.node.fields.slug,
+      },
+    });
+  });
 
-    return null
-  })
-}
+  //  Create tag pages
+  tagSet.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag)}/`,
+      component: tagPage,
+      context: { tag },
+    });
+  });
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `Mdx`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
-}
+  // Create category pages
+  categorySet.forEach(category => {
+    createPage({
+      path: `/${_.kebabCase(category)}/`,
+      component: categoryPage,
+      context: { category },
+    });
+  });
+};

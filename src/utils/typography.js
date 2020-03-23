@@ -1,23 +1,26 @@
-import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import Typography from 'typography';
+import parnassusTheme from 'typography-theme-parnassus';
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  }
-}
+parnassusTheme.baseFontSize = '16px;';
+parnassusTheme.overrideThemeStyles = ({ rhythm }) => ({
+  'h1,h2,h3,h4,h5,h6': {
+    marginBottom: rhythm(1 / 2),
+    marginTop: rhythm(1),
+  },
+});
+parnassusTheme.googleFonts = [
+  {
+    name: 'Merriweather Sans',
+    styles: ['800'],
+  },
+  {
+    name: 'Merriweather',
+    styles: ['400,400i,700&display=swap'],
+  },
+];
 
-delete Wordpress2016.googleFonts
+const typography = new Typography(parnassusTheme);
 
-const typography = new Typography(Wordpress2016)
-
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== `production`) {
-  typography.injectStyles()
-}
-
-export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale
+// Export helper functions
+export const { scale, rhythm, options } = typography;
+export default typography;

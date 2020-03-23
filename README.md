@@ -1,64 +1,22 @@
-<<<<<<< HEAD
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's personal blog starter
-</h1>
+# [marigno.com](https://marigno.com)
 
-<img alt="screesnhot" src="./screenshot.png">
+This is the source code for my personal website and blog [marigno.com](https://marigno.com).
 
-This starter is a fork of Gatsby Starter Blog, the most popular starter by far – with second place being Gatsby Starter Netlify CMS. So I decided to combine the 2!
+It's a fully static site built with Gatsby.js that maximizes speed (both of the website and of development) and simplicity. It was coded and created  by my friend Obed for his blog [obedparla.com](https://obedparla.com). I have tweaked to the way that I like!
 
-## 🚀 Quick start
+## Why?
+I've decided to start my blog with some simple, light weight, fast and avaiable to let me focus on content, while controling everyhting else. 
 
-1.  **Create a Gatsby site.**
+## Tech Stack
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+- [React](https://github.com/facebook/react) - Fast, efficient development
+- [Gatsby.js](https://github.com/gatsbyjs/gatsby) - Extremely powerful static site generator for React
+- [Gatsby Advanced Started](https://github.com/Vagr9K/gatsby-advanced-starter) - A skeleton started for Gatsby that takes away a lot of boiler plate
+- [Emotion](https://github.com/emotion-js/emotion) - Great CSS-in-JS library
+- [Prettier](https://github.com/prettier/prettier) - Don't think about how your code looks but how it works
 
-    ```sh
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/thomaswang/gatsby-personal-starter-blog
-    ```
+## License
+Licensed under the MIT License. Feel free to use parts of the code in your own projects with attribution!
 
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd my-blog-starter/
-    gatsby develop
-    ```
-
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 📔 Learning Netlify CMS with Gatsby
-
-Start from [this point](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/#authenticating-with-github) in the Gatsby documentation to finish the set up for your personal Netlify CMS with authentication.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thomaswangio/gatsby-personal-starter-blog)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
-=======
-# blog
-My blog
->>>>>>> 61d4650726130b99b46378036dcd0de5242f591e
+Do keep in mind this is a personal website so it has a lot of modifications to the Gatsby Advanced Started theme.
+You'd be wiser to use that instead of trying to base work off this repo, but please feel free to use this as an inspiration!
