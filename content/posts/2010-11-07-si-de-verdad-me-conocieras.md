@@ -5,7 +5,7 @@ date : "2010-11-07"
 categories : 
  - poetry
 tags : ""
-cover : "../images/si-de-verdad-me-conocieras.jpg"
+cover : "../images/if-you-truly-knew-me.jpg"
 ---
 
 Si de verdad me conocieras sabrías que aunque tenga una sonrisa en la cara, no es porque este feliz.
