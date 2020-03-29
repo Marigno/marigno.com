@@ -4,6 +4,7 @@ author : "Diego Marigno"
 date : "2016-04-10"
 categories : 
  - review
+ - popular
 tags : ""
 cover : "../images/borges-the-aleph.jpg"
 ---

@@ -4,11 +4,12 @@ author : "Diego Marigno"
 date : "2010-11-14"
 categories : 
  - poetry
+ - popular
 tags : ""
 cover : "../images/poetry-books.jpg"
 ---
 
-This is the very first line that I have a record of writting.
+This is one of the first lines that I have a record of writting.
 
 In English
 

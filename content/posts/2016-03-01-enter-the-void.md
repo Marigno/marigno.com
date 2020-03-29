@@ -4,6 +4,7 @@ author : "Diego Marigno"
 date : "2016-03-01"
 categories : 
  - review
+ - popular
 tags : ""
 cover : "../images/enter-the-void.jpg"
 ---
