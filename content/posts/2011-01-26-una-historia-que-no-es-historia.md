@@ -5,6 +5,7 @@ date : "2011-01-26"
 categories : 
  - poetry
 tags : ""
+picture : 'Diego Marigno (2012)'
 cover : "../images/a-history.jpg"
 ---
 

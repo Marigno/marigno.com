@@ -5,7 +5,8 @@ date : "2011-05-11"
 categories : 
  - poetry
 tags : ""
-cover : "../images/enjoy-and-be-happy.jpeg"
+picture : 'Diego Marigno (2014)'
+cover : "../images/enjoy-and-be-happy.jpg"
 ---
 
 Tengo temor, a enamorarme,

@@ -5,6 +5,7 @@ date : "2010-11-07"
 categories : 
  - poetry
 tags : ""
+picture : 'Diego Marigno (2012)'
 cover : "../images/if-you-truly-knew-me.jpg"
 ---
 

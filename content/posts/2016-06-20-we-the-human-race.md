@@ -5,6 +5,7 @@ date : "2016-06-20"
 categories : 
  - stories
 tags : ""
+picture : 'C.F. Rassweiler & Co. (1893)'
 cover : "../images/human-race.jpg"
 ---
 

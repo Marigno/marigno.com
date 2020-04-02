@@ -5,6 +5,7 @@ date : "2016-02-28"
 categories : 
  - stories
 tags : ""
+picture : 'Diego Marigno (2012)'
 cover : "../images/our-world.jpg"
 ---
 

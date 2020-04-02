@@ -6,7 +6,8 @@ categories :
  - poetry
  - popular
 tags : ""
-cover : "../images/poetry-books.jpg"
+picture : 'Diego Marigno (2012)'
+cover : "../images/abstract-piece.jpg"
 ---
 
 This is one of the first lines that I have a record of writting.

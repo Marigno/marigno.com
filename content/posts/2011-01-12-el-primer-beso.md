@@ -5,6 +5,7 @@ date : "2011-01-12"
 categories : 
  - poetry
 tags : ""
+picture : 'Diego Marigno (2012)'
 cover : "../images/first-kiss.jpg"
 ---
 

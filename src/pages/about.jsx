@@ -46,8 +46,12 @@ const AboutPage = () => {
        Photography is one of my passions. I have always tried to
        express myself, and show others how I see the world, through a lense. 
        I believe that everything worthwhile telling can be encaptured in a photo.
-       They are our memories from eternity. You can see my portafolio{' '}
-        <a href=''>here</a>.
+       They are our memories from eternity. 
+      </p>
+      <p>
+        Almost all images that you might find on this website were taken by me.
+        You can check if an image was taken by me just by checking the "photo by" tag.
+        I currently use a Nikon D7000, with a Nikkor 50mm f/1.8G, and a GoPro MAX.
       </p>
 
       <h2>This place</h2>

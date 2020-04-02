@@ -5,6 +5,7 @@ date : "2016-02-11"
 categories : 
  - essay
 tags : ""
+picture : 'Diego Marigno (2012)'
 cover : "../images/freedom-of-speech.jpg"
 ---
 

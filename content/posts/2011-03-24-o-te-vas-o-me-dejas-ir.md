@@ -5,6 +5,7 @@ date : "2011-03-24"
 categories : 
  - poetry
 tags : ""
+picture : 'Diego Marigno (2013)'
 cover : "../images/leave-me-to-be.jpg"
 ---
 

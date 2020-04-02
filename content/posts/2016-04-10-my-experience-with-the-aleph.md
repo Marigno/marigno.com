@@ -6,6 +6,7 @@ categories :
  - review
  - popular
 tags : ""
+picture : 'Wikimedia Commons' 
 cover : "../images/borges-the-aleph.jpg"
 ---
 

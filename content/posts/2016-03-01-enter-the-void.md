@@ -6,6 +6,7 @@ categories :
  - review
  - popular
 tags : ""
+picture : 'Gaspar Noé'
 cover : "../images/enter-the-void.jpg"
 ---
 

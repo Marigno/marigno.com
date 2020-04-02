@@ -5,6 +5,7 @@ date : "2011-07-22"
 categories : 
  - poetry
 tags : ""
+picture : 'Diego Marigno (2012)'
 cover : "../images/i-kissed-you.jpg"
 ---
 

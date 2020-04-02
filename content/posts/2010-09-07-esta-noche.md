@@ -5,6 +5,7 @@ date : "2010-09-07"
 categories : 
  - poetry
 tags : ""
+picture : 'Diego Marigno (2012)'
 cover : "../images/dreaming-tonight.jpg"
 ---
 

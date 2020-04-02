@@ -5,6 +5,7 @@ date : "2016-03-15"
 categories : 
  - stories
 tags : ""
+picture : 'WHNT 19 News' 
 cover : "../images/medical-marijuana.jpg"
 ---
 

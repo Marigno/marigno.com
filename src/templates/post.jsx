@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import styled from '@emotion/styled';
 
 import Layout from '../layout/Layout';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
@@ -19,6 +20,12 @@ const PostTemplate = props => {
   const post = postNode.frontmatter;
   const { fancyDate, fileName } = postNode.fields;
   const githubLink = `${config.repo}/blob/master/content/posts/${fileName}.md`;
+
+const CopyBy = styled.small`
+  display: block;
+  font-style: italic;
+  text-align: right;
+`;
 
   return (
     <Layout>
@@ -38,6 +45,8 @@ const PostTemplate = props => {
           <PostInfo date={fancyDate} timeToRead={postNode.timeToRead} />
           <small>
             {' - '}
+            <i><span>photo by {post.picture}</span></i>
+            {' - '}
             {post.categories.map((category, index) => (
               <React.Fragment key={category}>
                 <Link to={`/${category}/`}>{category}</Link>
@@ -49,6 +58,7 @@ const PostTemplate = props => {
           </small>
         </SpacingContainer>
         <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+        <CopyBy>Written by {post.author}</CopyBy>
         <hr />
         <NewsletterIframe margin={'0 0 1.4rem'} />
 
@@ -71,7 +81,9 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
+        author
         categories
+        picture
         cover {
           childImageSharp {
             fluid(maxWidth: 600, quality: 85) {

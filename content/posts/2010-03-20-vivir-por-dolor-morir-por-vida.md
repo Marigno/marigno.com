@@ -6,7 +6,9 @@ categories :
  - poetry
  - stories
 tags : ""
+picture : 'Diego Marigno (2015)'
 cover : "../images/living-without-pain.jpg"
+
 ---
 
 Justo cuando pensé en eso, corte el pensamiento en seco. Aunque realmente no había forma de hacer que el dolor se fuera... poco a poco, me consumía, más y más.
