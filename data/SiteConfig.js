@@ -16,7 +16,7 @@ const config = {
     dateFormat: 'DD/MM/YYYY', // Date format for display.
     userEmail: 'diego@marigno.com', // Email used for RSS feed's author segment
     userTwitter: 'diegomarigno', // Optionally renders "Follow Me" in the UserInfo segment.
-    userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
+    userAvatar: '/myself.png', // User avatar to display in the author segment.
     themeColor: '#fff', // Used for setting manifest and progress theme colors.
     backgroundColor: '#fff', // Used for setting manifest background color.
     repo: 'https://github.com/Marigno/marigno.com',
