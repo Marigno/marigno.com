@@ -1,5 +1,5 @@
 ---
-title : 'El primer beso...'
+title : 'El Primer Beso...'
 author : "Diego Marigno"
 date : "2011-01-12"
 categories : 

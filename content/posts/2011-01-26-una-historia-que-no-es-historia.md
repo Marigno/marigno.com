@@ -1,5 +1,5 @@
 ---
-title : 'Una historia que no es historia'
+title : 'Una Historia Que No Es Historia'
 author : "Diego Marigno"
 date : "2011-01-26"
 categories : 

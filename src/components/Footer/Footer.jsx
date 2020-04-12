@@ -6,7 +6,9 @@ import { Container } from '../../layout/components/container';
 import {
   GithubIcon,
   TwitterIcon,
+  RssIcon,
   GoodreadsIcon,
+  InstagramIcon,
 } from './components/Icons';
 
 const Footer = () => (
@@ -22,6 +24,14 @@ const Footer = () => (
           <TwitterIcon />
         </FooterLink>
         <FooterLink
+          href={config.siteRss}
+          target='_blank'
+          rel='noreferrer nofollow'
+          title='Follow the RSS feed'
+        >
+          <RssIcon />
+        </FooterLink>
+        <FooterLink
           href={config.repo}
           target='_blank'
           rel='noreferrer nofollow'
@@ -31,9 +41,18 @@ const Footer = () => (
         </FooterLink>
         <FooterLink 
         href='https://www.goodreads.com/review/list/35837419-diego-marigno?shelf=read'
+        target='_blank'
         title='See all my read books'
         >
           <GoodreadsIcon />
+          
+        </FooterLink>
+        <FooterLink 
+        href='https://www.instagram.com/diegomarigno/'
+        target='_blank'
+        title='See all my photos on Instagram'
+        >
+          <InstagramIcon />
           
         </FooterLink>
       </Container>
@@ -57,7 +76,7 @@ export const FooterLink = styled.a`
   text-decoration: none;
   justify-content: center;
   position: relative;
-  left: 45%; 
+  left: 40%; 
   box-shadow: none;
   margin-right: 5px;
   color: ${({ theme }) => theme.textColor};

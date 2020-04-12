@@ -1,5 +1,5 @@
 ---
-title : 'Te besé, al humo dulce y sencillo de un rato'
+title : 'Te Besé, al Humo Dulce y Sencillo de Un Rato'
 author : "Diego Marigno"
 date : "2011-07-22"
 categories : 

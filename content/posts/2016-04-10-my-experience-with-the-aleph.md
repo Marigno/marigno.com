@@ -1,5 +1,5 @@
 ---
-title : 'My experience with The Aleph'
+title : 'My Experience With The Aleph'
 author : "Diego Marigno"
 date : "2016-04-10"
 categories : 

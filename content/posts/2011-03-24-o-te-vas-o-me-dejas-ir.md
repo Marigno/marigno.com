@@ -1,5 +1,5 @@
 ---
-title : 'O te vas o me dejas ir'
+title : 'O Te Vas o Me Dejas Ir'
 author : "Diego Marigno"
 date : "2011-03-24"
 categories : 

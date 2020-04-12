@@ -1,5 +1,5 @@
 ---
-title : 'Be one with your heart'
+title : 'Be One With Your Heart'
 author : "Diego Marigno"
 date : "2017-09-14"
 categories : 

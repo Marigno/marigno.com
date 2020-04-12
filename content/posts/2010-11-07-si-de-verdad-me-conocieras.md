@@ -1,5 +1,5 @@
 ---
-title : 'Si de verdad me conocieras...'
+title : 'Si De Verdad Me Conocieras...'
 author : "Diego Marigno"
 date : "2010-11-07"
 categories : 

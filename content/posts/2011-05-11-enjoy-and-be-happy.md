@@ -1,5 +1,5 @@
 ---
-title : 'Enjoy and be happpy'
+title : 'Enjoy and Be Happy'
 author : "Diego Marigno"
 date : "2011-05-11"
 categories : 

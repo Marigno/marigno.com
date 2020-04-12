@@ -1,5 +1,5 @@
 ---
-title : 'How I Hacked My Habits To Become More Proficient'
+title : 'How I Hacked My Habits to Become More Proficient'
 author : "Diego Marigno"
 date : "2020-04-02"
 categories : 
@@ -10,14 +10,13 @@ picture : 'Diego Marigno (2020)'
 cover : "../images/how-i-hacked-my-habits-to-become-more-proficient.jpg"
 ---
 
-
 One of the things that I have noticed to be a game changer are habits. But, changing an habit, unlearning or learning any habit can be a challenge.
 
 When you’re able to control your habits and the patterns that your mind creates, you won’t have any issues into achieving all the results you want to achieve.
 
 But if you lack the mind power to control your thoughts, then you’re not going to be able to direct your conscious thinking into achieving better results.
 
-### How habits work and how to improve them
+### How Habits Work and How to Improve Them
 
 Habits are actions or behaviours that become repetitive. Any repetitive habit can be either healthy or unhealthy. The goal would be to grow more healthier habits and forget the unhealthy ones. 
 
@@ -25,7 +24,7 @@ Habits are based upon the reward mechanism system, since every single time that 
 
 The way to improve your habits is quite simple. You need to start by listening to yourself. Listen to your body, to your mind, to your soul. You need to put all of the behaviours that you consider to be a habit and scrutinise each an every one, deeply. After that, you need to basically decide if it is good for you and it should be kept, or if it is unhealthy and it needs to either be eliminated or changed.
 
-### Repetition forms habits
+### Repetition Forms Habits
 
 When you are repeating things over and over again, you are able to create and form habits.
 
@@ -37,7 +36,7 @@ I once was told a history about a bucket that was full of water. The first day, 
 
 At the beginning, you would say that nothing is happening and that the water remains the same. After so many repetitions, the water starts to change and eventually there comes a moment where the water is no longer clear, but it has taken over the tonality/colour of the ink that was poured into it.
 
-### Unlearning what you have learned
+### Unlearning What You Have Learned
 
 In order to unlearn a behaviour, you must first realise the existence of that behaviour. Once you have been able to do that, you need to pay attention to how you have changed ever since you learned that. Then, you will be able to change actively your behaviours by choosing to act differently. You can learn a new habit, by unlearning an old habit.
 

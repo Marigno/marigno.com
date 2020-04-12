@@ -1,5 +1,5 @@
 ---
-title : 'This is our world'
+title : 'This is Our World'
 author : "Diego Marigno"
 date : "2016-02-28"
 categories : 

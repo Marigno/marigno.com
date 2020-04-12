@@ -1,12 +1,12 @@
 ---
-title : 'Learn How To Focus On What You Want'
+title : 'Learn How to Focus On What You Want'
 author : "Diego Marigno"
 date : "2020-02-20"
 categories : 
  - stories
  - popular
 tags : ""
-picture : 'Diego Marigno (2015)'
+picture : 'Diego Marigno (2020)'
 cover : "../images/learn-how-to-focus-on-what-you-want.jpg"
 ---
 

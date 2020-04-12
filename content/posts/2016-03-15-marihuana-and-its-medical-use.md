@@ -1,5 +1,5 @@
 ---
-title : 'Marijuana and its medicinal use'
+title : 'Marijuana and Its Medicinal Use'
 author : "Diego Marigno"
 date : "2016-03-15"
 categories : 

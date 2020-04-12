@@ -1,5 +1,5 @@
 ---
-title : 'We, the Human Race'
+title : 'We, The Human Race'
 author : "Diego Marigno"
 date : "2016-06-20"
 categories : 
