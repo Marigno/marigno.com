@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const PostDate = ({ date }) => (
-  <small>
+  <span>
     <br></br>
     <span>{date}</span>
-  </small>
+  </span>
 );
 
 PostDate.propTypes = {

@@ -1,9 +1,10 @@
 ---
 title : 'Measurement and Comparisons: Distances, Time and Chances'
 author : "Diego Marigno"
-date : "2020-05-03"
+date : "2020-05-04"
 categories : 
  - stories
+ - popular
 tags : ""
 picture : 'Diego Marigno (2014)'
 cover : "../images/measurements-and-comparisons.jpg"

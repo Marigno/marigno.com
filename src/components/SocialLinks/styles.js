@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const StyledSocialLinks = styled.div`
   display: flex;
-  justify-content: flex-end;
+  
 
   & > div {
     cursor: pointer;
@@ -11,7 +11,7 @@ export const StyledSocialLinks = styled.div`
   & svg {
     height: 36px;
     width: 36px;
-    margin: 0px 5px;
+    margin: 0px 2px;
     transition: all .2s ease-in-out; 
   }
   

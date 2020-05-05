@@ -70,10 +70,10 @@ flex-grow: 1;
         </SpacingContainer>
         <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <PostEnd>
-           <FirstEnd><EndTitle>{'LAST UPDATED:'}</EndTitle>
-           <PostDate date={fancyDate} /></FirstEnd>
-           <TextEnd><EndTitle>{'TELL YOUR FRIENDS'}</EndTitle>
-          <SocialLinks postPath={slug} postNode={postNode} /></TextEnd>
+           <FirstEnd><EndTitle>{'TELL YOUR FRIENDS'}</EndTitle>
+          <SocialLinks postPath={slug} postNode={postNode} /></FirstEnd>
+           <TextEnd><EndTitle>{'LAST UPDATED:'}</EndTitle>
+           <PostDate date={fancyDate} /></TextEnd>
         </PostEnd>
         <NewsletterIframe margin={'0 0 1.4rem'} />
       </Article>
