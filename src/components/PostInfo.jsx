@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const PostInfo = ({ date, timeToRead }) => (
   <small>
     <span>{date}</span>
-    <span>{` - ${timeToRead} min read`}</span>
+    <span>{` • ${timeToRead} min read`}</span>
   </small>
 );
 

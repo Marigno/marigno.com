@@ -8,7 +8,8 @@ import Layout from '../layout/Layout';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
-import { PostInfo } from '../components/PostInfo';
+import { PostRead } from '../components/PostRead';
+import { PostDate} from '../components/PostDate';
 import { NewsletterIframe } from '../components/NewsletterIframe';
 import { Article } from './styles';
 import { SpacingContainer } from '../components/styles';
@@ -21,11 +22,23 @@ const PostTemplate = props => {
   const { fancyDate, fileName } = postNode.fields;
   const githubLink = `${config.repo}/blob/master/content/posts/${fileName}.md`;
 
-const CopyBy = styled.small`
-  display: block;
-  font-style: italic;
-  text-align: right;
+const PostEnd = styled.div`
+  display: flex;
+  
 `;
+
+const TextEnd = styled.div`
+text-align: right;
+`;
+
+const EndTitle = styled.span`
+font-size: 14px;
+`;
+
+const FirstEnd = styled.div`
+flex-grow: 1;
+`;
+
 
   return (
     <Layout>
@@ -42,29 +55,27 @@ const CopyBy = styled.small`
         </SpacingContainer>
 
         <SpacingContainer marginBottom='40px'>
-          <PostInfo date={fancyDate} timeToRead={postNode.timeToRead} />
+          <PostRead timeToRead={postNode.timeToRead} />
           <small>
-            {' - '}
+            {' • '}
             <i><span>photo by {post.picture}</span></i>
-            {' - '}
+            {' • '}
             {post.categories.map((category, index) => (
               <React.Fragment key={category}>
                 <Link to={`/${category}/`}>{category}</Link>
                 {index < post.categories.length - 1 && ', '}
               </React.Fragment>
             ))}
-            {' - '}
-            <a href={githubLink}>Edit on Github</a>
           </small>
         </SpacingContainer>
         <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-        <CopyBy>Written by {post.author}</CopyBy>
-        <hr />
+        <PostEnd>
+           <FirstEnd><EndTitle>{'LAST UPDATED:'}</EndTitle>
+           <PostDate date={fancyDate} /></FirstEnd>
+           <TextEnd><EndTitle>{'TELL YOUR FRIENDS'}</EndTitle>
+          <SocialLinks postPath={slug} postNode={postNode} /></TextEnd>
+        </PostEnd>
         <NewsletterIframe margin={'0 0 1.4rem'} />
-
-        <div className='post-meta'>
-          <SocialLinks postPath={slug} postNode={postNode} />
-        </div>
       </Article>
     </Layout>
   );

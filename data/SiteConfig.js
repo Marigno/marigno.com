@@ -12,7 +12,7 @@ const config = {
     googleAnalyticsID: 'UA-83648832-1', // GA tracking ID.
     disqusShortname: '', // Disqus shortname.
     dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
-    dateFancyFormat: 'MMMM Do, YYYY', // Date format used to stylize
+    dateFancyFormat: 'MMM D, YYYY', // Date format used to stylize
     dateFormat: 'DD/MM/YYYY', // Date format for display.
     userEmail: 'diego@marigno.com', // Email used for RSS feed's author segment
     userTwitter: 'diegomarigno', // Optionally renders "Follow Me" in the UserInfo segment.

@@ -31,14 +31,6 @@ const Footer = () => (
         >
           <RssIcon />
         </FooterLink>
-        <FooterLink
-          href={config.repo}
-          target='_blank'
-          rel='noreferrer nofollow'
-          title='View source on Github'
-        >
-          <GithubIcon />
-        </FooterLink>
         <FooterLink 
         href='https://www.goodreads.com/review/list/35837419-diego-marigno?shelf=read'
         target='_blank'

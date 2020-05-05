@@ -2,7 +2,7 @@
 
 This is the source code for my personal website and blog [marigno.com](https://marigno.com).
 
-It's a fully static site built with Gatsby.js that maximizes speed (both of the website and of development) and simplicity. It was coded and created  by my friend Obed for his blog [obedparla.com](https://obedparla.com). I have tweaked the code to the way that I like it!
+It's a fully static site built with Gatsby.js that maximizes speed (both of the website and of development) and simplicity. 
 
 ## Why?
 I've decided to start my blog with some simple, light weight, fast and avaiable to let me focus on content, while controling everyhting else. 

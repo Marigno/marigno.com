@@ -4,6 +4,8 @@ import styled from '@emotion/styled';
 
 const Iframe = styled.iframe`
   margin: ${({ margin }) => margin || 0};
+  background: #fafafa;
+  border-radius: 4px;
 `;
 
 export const NewsletterIframe = props => (

@@ -63,6 +63,10 @@ const ListItemHeader = styled.h2`
   margin-top: ${props => (props.isBig ? '0.625rem' : '0')};
   margin-bottom: ${props => (!props.isBig ? '0' : '0.5rem')};
   font-size: ${props => !props.isBig && '1.25rem'};
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 export default PostListing;
