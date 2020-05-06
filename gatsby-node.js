@@ -46,6 +46,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
         createNodeField({
           node,
+          name: 'shortDate',
+          value: moment(date, siteConfig.dateFromFormat).format(
+            siteConfig.dateShortFormat,
+          ),
+        });
+
+        createNodeField({
+          node,
           name: 'fileName',
           value: parsedFilePath.name,
         });

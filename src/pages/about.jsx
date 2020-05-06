@@ -19,7 +19,7 @@ const AboutMe = styled.div`
 `;
 const AboutPage = () => {
   const today = new Date();
-  const birthDate = new Date('2015-09-18');
+  const birthDate = new Date('2010-03-29');
   const m = today.getMonth() - birthDate.getMonth();
 
   let age = today.getFullYear() - birthDate.getFullYear();
@@ -46,23 +46,26 @@ const AboutPage = () => {
        Photography is one of my passions. I have always tried to
        express myself, and show others how I see the world, through a lense. 
        I believe that everything worthwhile telling can be encaptured in a photo.
-       They are our memories from eternity. 
+       Pictures are our memories from eternity. 
       </p>
       <p>
         Almost all images that you might find on this website were taken by me.
-        You can check if an image was taken by me just by checking the "photo by" tag.
-        I currently use a Nikon D7000, with a Nikkor 50mm f/1.8G, and a GoPro MAX.
+        You can check if an image was taken by me just by checking the "photo by" tag under every image.
+        I currently use a Nikon D7000, with a Nikkor 50mm f/1.8G, and a GoPro MAX. 
+      </p>
+      <p>
+        If you're looking to send me a gift, a drone is probably the best idea.
       </p>
 
       <h2>This place</h2>
       <p>
         This is my personal website on the internet. You'll find articles about my
-        ideas, thoughts and everything else that I consider worthwhile.
+        ideas, thoughts and everything else that I consider worthwhile. It's been {age} years since I've been writing.
       </p>
 
       <p>
         There are moments that have defined me deeply and I always carry those moments with me; 
-        I'm passionate, I like to go beyond, and if you find me, 
+        I'm passionate about life in general. I like to go beyond, and if you find me, 
         you would most probably encounter me day-dreaming! 
       </p>
 
