@@ -12,7 +12,7 @@ export const NewsletterIframe = props => (
   <Iframe
     title='Subscribe to my newsletter'
     width={props.width || '100%'}
-    height={props.height || '300px'}
+    height={props.height || '285px'}
     src='https://marigno.substack.com/embed'
     frameBorder='0'
     scrolling='no'

@@ -23,8 +23,7 @@ const PostTemplate = props => {
   const githubLink = `${config.repo}/blob/master/content/posts/${fileName}.md`;
 
 const PostEnd = styled.div`
-  display: flex;
-  
+display: flex;
 `;
 
 const TextEnd = styled.div`
@@ -32,7 +31,7 @@ text-align: right;
 `;
 
 const EndTitle = styled.span`
-font-size: 14px;
+font-size: 12px;
 `;
 
 const FirstEnd = styled.div`
@@ -70,7 +69,7 @@ flex-grow: 1;
         </SpacingContainer>
         <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <PostEnd>
-           <FirstEnd><EndTitle>{'TELL YOUR FRIENDS'}</EndTitle>
+           <FirstEnd><EndTitle>{'SHARE THIS NOW'}</EndTitle>
           <SocialLinks postPath={slug} postNode={postNode} /></FirstEnd>
            <TextEnd><EndTitle>{'LAST UPDATED:'}</EndTitle>
            <PostDate date={fancyDate} /></TextEnd>
