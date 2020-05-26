@@ -71,7 +71,7 @@ flex-grow: 1;
         <PostEnd>
            <FirstEnd><EndTitle>{'SHARE THIS NOW'}</EndTitle>
           <SocialLinks postPath={slug} postNode={postNode} /></FirstEnd>
-           <TextEnd><EndTitle>{'LAST UPDATED:'}</EndTitle>
+           <TextEnd><EndTitle>{'WRITTEN ON:'}</EndTitle>
            <PostDate date={fancyDate} /></TextEnd>
         </PostEnd>
         <NewsletterIframe margin={'0 0 1.4rem'} />
