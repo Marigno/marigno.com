@@ -34,8 +34,7 @@ const AboutPage = () => {
         <div>
           <h1>About me</h1>
           <p>
-            I'm Diego Marigno, I'm a writer and photographer living in the
-            beautiful city of Bogotá and working remote for a freelancing chat firm.
+            I'm Diego Marigno, I'm a programmer, writer and photographer currently working remote as a Customer Support Agent.
           </p>
         </div>
         <img src='/myself.png' alt='Diego Marigno' />
@@ -43,8 +42,7 @@ const AboutPage = () => {
 
       <h2>Photography</h2>
       <p>
-       Photography is one of my passions. I have always tried to
-       express myself, and show others how I see the world, through a lense. 
+       Photography is one of my passions. I have always tried to show others how I see the world, specially through a lense. 
        I believe that everything worthwhile telling can be encaptured in a photo.
        Pictures are our memories from eternity. 
       </p>
