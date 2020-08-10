@@ -1,5 +1,5 @@
 ---
-title : 'How to Know if You're On the Right Path'
+title : "How to Know if You're On the  Right Path"
 author : "Diego Marigno"
 date : "2020-08-08"
 categories : 
