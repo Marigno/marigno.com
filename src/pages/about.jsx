@@ -32,9 +32,9 @@ const AboutPage = () => {
 
       <AboutMe>
         <div>
-          <h1>About me</h1>
+          <h1>Hey, I'm Diego</h1>
           <p>
-            I'm Diego Marigno, I'm a programmer, writer and photographer currently working remote as a Customer Support Agent.
+            I'm a writer, programmer and photographer currently working remote as a Customer Support Agent.
           </p>
         </div>
         <img src='/myself.png' alt='Diego Marigno' />
@@ -42,13 +42,11 @@ const AboutPage = () => {
 
       <h2>Photography</h2>
       <p>
-       Photography is one of my passions. I have always tried to show others how I see the world, specially through a lense. 
-       I believe that everything worthwhile telling can be encaptured in a photo.
-       Pictures are our memories from eternity. 
+       Pictures are our memories from eternity, and
+       I believe that everything worthwhile telling can be encaptured in a photo. 
       </p>
       <p>
-        Almost all images that you might find on this website were taken by me.
-        You can check if an image was taken by me just by checking the "photo by" tag under every image.
+        All images that you may find on this website were taken by me.
         I currently use a Nikon D7000, with a Nikkor 50mm f/1.8G, and a GoPro MAX. 
       </p>
       <p>
@@ -57,12 +55,11 @@ const AboutPage = () => {
 
       <h2>This place</h2>
       <p>
-        This is my personal website on the internet. You'll find articles about my
-        ideas, thoughts and everything else that I consider worthwhile. It's been {age} years since I've been writing.
+        Here you'll find articles about my ideas, thoughts and everything else that I consider worthwhile. 
+        It's been {age} years since I've been writing.
       </p>
 
       <p>
-        There are moments that have defined me deeply and I always carry those moments with me; 
         I'm passionate about life in general. I like to go beyond, and if you find me, 
         you would most probably encounter me day-dreaming! 
       </p>

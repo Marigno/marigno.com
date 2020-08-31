@@ -87,12 +87,12 @@ There's plenty of other techniques out there. Go out there and find the one that
 
 You need to be able to manage yourself better. The only way that you can achieve this is by doing it yourself.
 
-You need to learn to make yourself accountable for everything that you do. You need to find everything that motivates you, thrusting forward into who you wish to become.
+You need to learn to make yourself accountable for everything that you do. You need to find everything that motivates you, thrusting forward into whom you wish to become.
 
 Be patient with yourself, with your current speed in life and the way that things are going. Everything that is happening needed to happen. Life is going to take you exactly where you need to be, at the correct time; there's no need to rush about anything.
 
-It's not easy to like something that leaves us a bitter taste in the mouth, but it's the only way to grow. The process of building, learning, executing, and creating requires failure. Being successful requires failure. 
+It's not easy to like something that leaves us a bitter taste in the mouth, but it's the only way to grow. The process of building, learning, executing and creating requires failure. Being successful requires failure. 
 
-The only way that you're going to be OK with failure is by learning how to overcome it.The only way to overcome anything is by embracing it. Embrace your failures and love your losses. 
+The only way that you're going to be OK with failure is by learning how to overcome it. The only way to overcome anything is by embracing it. Embrace your failures and love your losses. 
 
 Make time your own! Go out there and find what works for you. Have you looked *hard* enough? 
