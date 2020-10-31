@@ -39,8 +39,7 @@ const IndexPage = props => {
           <div>
           <h1>Hi! I'm Diego {emoji}</h1>
             <SpacingContainer as={'p'} marginBottom={'4px'}>
-              I'm a writer and photographer. Currently I'm studying JSX and React. Here you'll find motivation, passion, positivity about
-              life in general, and probably some poetry. All images were taken by me. 
+              I'm a writer, coder and photographer. Here you'll find motivation, positivity, and probably some poetry. All images were taken by me. 
             </SpacingContainer>
           </div>
           <Link to='/about/'>

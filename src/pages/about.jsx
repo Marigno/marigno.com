@@ -34,7 +34,7 @@ const AboutPage = () => {
         <div>
           <h1>Hey, I'm Diego</h1>
           <p>
-            I'm a writer, programmer and photographer currently working remote as a Customer Support Agent.
+            I'm a writer, programmer and photographer. I work as a Customer Support Agent at <a target="_blank" href="http://soflyy.com">Soflyy</a>.
           </p>
         </div>
         <img src='/myself.png' alt='Diego Marigno' />
@@ -43,14 +43,11 @@ const AboutPage = () => {
       <h2>Photography</h2>
       <p>
        Pictures are our memories from eternity, and
-       I believe that everything worthwhile telling can be encaptured in a photo. 
+       I believe that everything that's worth telling can be encaptured in a photo. 
       </p>
       <p>
         All images that you may find on this website were taken by me.
         I currently use a Nikon D7000, with a Nikkor 50mm f/1.8G, and a GoPro MAX. 
-      </p>
-      <p>
-        If you're looking to send me a gift, a drone is probably the best idea.
       </p>
 
       <h2>This place</h2>
