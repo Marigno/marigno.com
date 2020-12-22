@@ -4,6 +4,7 @@ author : "Diego Marigno"
 date : "2020-08-31"
 categories : 
  - stories
+ - popular
 tags : ""
 picture : 'Diego Marigno (2015)'
 cover : "../images/habits-do-matter.jpg"
