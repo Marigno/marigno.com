@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ThemeProvider } from '@emotion/react'
+import { ThemeProvider } from 'emotion-theming';
 
 import theme from './theme';
 

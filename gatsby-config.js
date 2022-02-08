@@ -86,7 +86,7 @@ module.exports = {
         name: config.siteTitle,
         short_name: config.siteTitleShort,
         description: config.siteDescription,
-        start_url: '/',
+        start_url: config.pathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
@@ -184,7 +184,6 @@ module.exports = {
             }
           `,
             output: config.siteRss,
-            title: config.siteTitle
           },
         ],
       },
