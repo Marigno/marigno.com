@@ -4,7 +4,6 @@ author : "Diego Marigno"
 date : "2010-11-14"
 categories : 
  - poetry
- - popular
 tags : ""
 picture : 'Diego Marigno (2012)'
 cover : "../images/abstract-piece.jpg"

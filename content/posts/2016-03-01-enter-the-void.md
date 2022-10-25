@@ -4,7 +4,6 @@ author : "Diego Marigno"
 date : "2016-03-01"
 categories : 
  - review
- - popular
 tags : ""
 picture : 'Gaspar Noé'
 cover : "../images/enter-the-void.jpg"

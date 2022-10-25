@@ -4,6 +4,7 @@ author : "Diego Marigno"
 date : "2020-09-25"
 categories : 
  - stories
+ - popular
 tags : ""
 picture : 'Diego Marigno (2015)'
 cover : "../images/what-you-focus-on.JPG"

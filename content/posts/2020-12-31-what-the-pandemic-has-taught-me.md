@@ -4,6 +4,7 @@ author : "Diego Marigno"
 date : "2020-12-31"
 categories : 
  - stories
+ - popular
 tags : ""
 picture : 'Diego Marigno (2016)'
 cover : "../images/year-2020.jpg"

@@ -4,6 +4,7 @@ author : "Diego Marigno"
 date : "2020-10-31"
 categories : 
  - stories
+ - popular
 tags : ""
 picture : 'Diego Marigno (2015)'
 cover : "../images/your-weight-on-other-planets.jpg"

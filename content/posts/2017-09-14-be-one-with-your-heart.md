@@ -4,7 +4,6 @@ author : "Diego Marigno"
 date : "2017-09-14"
 categories : 
  - stories
- - popular
 tags : ""
 picture : 'Diego Marigno (2013)'
 cover : "../images/be-one-with-your-heart.jpg"

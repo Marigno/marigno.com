@@ -4,7 +4,6 @@ author : "Diego Marigno"
 date : "2020-02-20"
 categories : 
  - stories
- - popular
 tags : ""
 picture : 'Diego Marigno (2020)'
 cover : "../images/learn-how-to-focus-on-what-you-want.jpg"
