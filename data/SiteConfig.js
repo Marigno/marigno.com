@@ -1,12 +1,12 @@
 const config = {
-    siteTitle: 'Diego Marigno - Writer & Photographer', // Site title.
+    siteTitle: 'Diego Marigno - Artist', // Site title.
     siteTitleShort: 'Diego Marigno', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-    siteTitleAlt: "Diego Marigno's Blog", // Alternative site title for SEO.
+    siteTitleAlt: "Diego Marigno's Site", // Alternative site title for SEO.
     siteLogo: '/logos/logo-512.png', // Logo used for SEO and manifest.
     siteUrl: 'https://marigno.com', // Domain of your website without pathPrefix.
     pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
     siteDescription:
-      "Personal blog by Diego Marigno. Thoughts, opinions and poems", // Website description used for RSS feeds/meta description tag.
+      "Personal site by Diego Marigno. Art, photography, technolopgy and more.", // Website description used for RSS feeds/meta description tag.
     siteRss: '/rss.xml', // Path to the RSS file.
     siteFBAppID: '', // FB Application ID for using app insights
     googleAnalyticsID: 'UA-83648832-1', // GA tracking ID.
@@ -16,7 +16,7 @@ const config = {
     dateShortFormat: 'MMM D, YYYY', // Short date format used to stylize
     dateFormat: 'DD/MM/YYYY', // Date format for display.
     userEmail: 'diego@marigno.com', // Email used for RSS feed's author segment
-    userTwitter: 'diegomarigno', // Optionally renders "Follow Me" in the UserInfo segment.
+    userTwitter: 'marigno_', // Optionally renders "Follow Me" in the UserInfo segment.
     userAvatar: '/myself.png', // User avatar to display in the author segment.
     themeColor: '#fff', // Used for setting manifest and progress theme colors.
     backgroundColor: '#fff', // Used for setting manifest background color.
