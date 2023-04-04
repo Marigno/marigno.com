@@ -34,7 +34,7 @@ const AboutPage = () => {
         <div>
           <h1>Hey, I'm Diego</h1>
           <p>
-            I'm a photographer and coder that likes to write. I work as a Customer Support Agent at <a target="_blank" href="http://soflyy.com">Soflyy</a>.
+            I'm an artist and photographer who also enjoys writing, and coding. I'm constantly learning and evolving the medium that I use to present my art. Currently, I'm focused mostly in NFTs and AI.
           </p>
         </div>
         <img src='/myself.png' alt='Diego Marigno' />
@@ -71,7 +71,7 @@ const AboutPage = () => {
       <h2>Contacting me</h2>
       <p>
         You can reach out to me on{' '}
-        <a href='https://twitter.com/diegomarigno'>Twitter</a>.
+        <a href='https://twitter.com/marigno_'>Twitter</a>.
       </p>
 
       <h2>Newsletter</h2>
