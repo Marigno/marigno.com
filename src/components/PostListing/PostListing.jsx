@@ -2,8 +2,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-import Img from 'gatsby-plugin-image';
-import { PostInfo } from '../PostInfo';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import PostInfo from '../PostInfo';
 
 const PostListing = ({ postList, isBig }) => {
   return (
@@ -13,17 +13,10 @@ const PostListing = ({ postList, isBig }) => {
           const ariaLabel = `Visit ${post.title}`;
           return (
             <PostItem key={post.path} isBig={isBig}>
-              {post.cover && (
-                <StyledLink to={post.path} isBig={isBig} aria-label={ariaLabel}>
-                  {post.cover && post.cover.childImageSharp.fixed && (
-                    <Img fixed={post.cover.childImageSharp.fixed} />
-                  )}
-                </StyledLink>
-              )}
               <PostItemContent>
                 <StyledLink to={post.path} isBig={isBig} aria-label={ariaLabel}>
-                  {post.cover && post.cover.childImageSharp.fluid && (
-                    <Img fluid={post.cover.childImageSharp.fluid} />
+                  {post.cover && post.cover.childImageSharp.gatsbyImageData && (
+                    <GatsbyImage image={post.cover.childImageSharp.gatsbyImageData} alt={post.title} />
                   )}
                   <ListItemHeader as={isBig ? 'h2' : 'h3'} isBig={isBig}>
                     {post.title}

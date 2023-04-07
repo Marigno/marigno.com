@@ -150,7 +150,7 @@ export default BlogPage;
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
   query Blogquery {
-    posts: allMdx(sort: { fields: [fields___date], order: DESC }) {
+    posts: allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
       edges {
         node {
           fields {
@@ -171,7 +171,7 @@ export const listingQuery = graphql`
         }
       }
     }
-    categories: allMdx {
+    categories: allMarkdownRemark {
       distinct(field: frontmatter___categories)
     }
   }

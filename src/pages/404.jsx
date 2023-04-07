@@ -49,13 +49,11 @@ export const listingQuery = graphql`
             date: fancyDate
           }
           timeToRead
-          frontmatter {
+          frontmatter { 
             categories
             cover {
               childImageSharp {
-                fixed(width: 70, height: 70) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 650, height: 250, quality: 60)
               }
             }
             title
