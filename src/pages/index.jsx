@@ -92,7 +92,7 @@ export const listingQuery = graphql`
             categories
             cover {
               childImageSharp {
-                gatsbyImageData(width: 70, height: 70, quality: 60)
+                gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED, aspectRatio: 1)
               }
             }
             title
@@ -116,7 +116,7 @@ export const listingQuery = graphql`
             categories
             cover {
               childImageSharp {
-                gatsbyImageData(width: 70, height: 70, quality: 60)
+                gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED, aspectRatio: 1)
               }
             }
             title
