@@ -1,3 +1,4 @@
+// gatsby-node.js
 /* eslint "no-console": "off" */
 
 const path = require('path');
@@ -70,8 +71,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const postPage = path.resolve('src/templates/post.jsx');
   const tagPage = path.resolve('src/templates/tag.jsx');
   const categoryPage = path.resolve('src/templates/category.jsx');
-  // Get a full list of markdown posts
-  const markdownQueryResult = await graphql(`
+
+  const result = await graphql(`
     {
       allMarkdownRemark {
         edges {
@@ -91,15 +92,15 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  if (markdownQueryResult.errors) {
-    console.error(markdownQueryResult.errors);
-    throw markdownQueryResult.errors;
+  if (result.errors) {
+    console.error(result.errors);
+    throw result.errors;
   }
 
   const tagSet = new Set();
   const categorySet = new Set();
 
-  const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+  const postsEdges = result.data.allMarkdownRemark.edges;
 
   // Sort posts
   postsEdges.sort((postA, postB) => {
@@ -115,7 +116,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
     if (dateA.isBefore(dateB)) return 1;
     if (dateB.isBefore(dateA)) return -1;
-
     return 0;
   });
 

@@ -1,3 +1,4 @@
+// gatsby-config.js
 const urljoin = require('url-join');
 const path = require('path');
 const config = require('./data/SiteConfig');
@@ -19,6 +20,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sharp',
+    'gatsby-plugin-image', // New in Gatsby v5
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
@@ -90,6 +92,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
+        icon: 'static/logos/logo-512.png', // Updated for Gatsby v5
         icons: [
           {
             src: '/logos/logo-192.png',
@@ -104,7 +107,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-remove-serviceworker',
     {
       resolve: 'gatsby-plugin-netlify-cms',
@@ -116,78 +118,78 @@ module.exports = {
         includeRobots: false,
       },
     },
-    {
-      resolve: 'gatsby-plugin-feed',
-      options: {
-        setup(ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "Diego Marigno's Blog";
-          return ret;
-        },
-        query: `
-        {
-          site {
-            siteMetadata {
-              rssMetadata {
-                site_url
-                feed_url
-                title
-                description
-                image_url
+      {
+        resolve: 'gatsby-plugin-feed',
+        options: {
+          setup(ref) {
+            const ret = ref.query.site.siteMetadata.rssMetadata;
+            ret.allMarkdownRemark = ref.query.allMarkdownRemark;
+            ret.generator = "Diego Marigno's Blog";
+            return ret;
+          },
+          query: `
+          {
+            site {
+              siteMetadata {
+                rssMetadata {
+                  site_url
+                  feed_url
+                  title
+                  description
+                  image_url
+                }
               }
             }
           }
-        }
-      `,
-        feeds: [
-          {
-            serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map(edge => ({
-                categories: edge.node.frontmatter.tags,
-                date: edge.node.fields.date,
-                title: edge.node.frontmatter.title,
-                description: edge.node.excerpt,
-                url: rssMetadata.site_url + edge.node.fields.slug,
-                guid: rssMetadata.site_url + edge.node.fields.slug,
-                custom_elements: [
-                  { 'content:encoded': edge.node.html },
-                  { author: config.userEmail },
-                ],
-              }));
-            },
-            query: `
+        `,
+          feeds: [
             {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [fields___date] },
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    timeToRead
-                    fields {
-                      slug
-                      date
-                    }
-                    frontmatter {
-                      title
-                      date
-                      categories
-                      tags
+              serialize(ctx) {
+                const { rssMetadata } = ctx.query.site.siteMetadata;
+                return ctx.query.allMarkdownRemark.edges.map(edge => ({
+                  categories: edge.node.frontmatter.tags,
+                  date: edge.node.fields.date,
+                  title: edge.node.frontmatter.title,
+                  description: edge.node.excerpt,
+                  url: rssMetadata.site_url + edge.node.fields.slug,
+                  guid: rssMetadata.site_url + edge.node.fields.slug,
+                  custom_elements: [
+                    { 'content:encoded': edge.node.html },
+                    { author: config.userEmail },
+                  ],
+                }));
+              },
+              query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [fields___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      timeToRead
+                      fields {
+                        slug
+                        date
+                      }
+                      frontmatter {
+                        title
+                        date
+                        categories
+                        tags
+                      }
                     }
                   }
                 }
               }
-            }
-          `,
-            output: config.siteRss,
-            title: config.siteTitle
-          },
-        ],
+            `,
+              output: config.siteRss,
+              title: config.siteTitle
+            },
+          ],
+        },
       },
-    },
-  ],
-};
+    ],
+  };

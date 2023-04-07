@@ -1,6 +1,7 @@
+// gatsby-browser.js
 import React from 'react';
 import { ThemeContextProvider } from './src/theming/ThemeContext';
 
-export const wrapRootElement = ({ element }) => (
-  <ThemeContextProvider>{element}</ThemeContextProvider>
-);
+export function wrapRootElement({ element }) {
+  return <ThemeContextProvider>{element}</ThemeContextProvider>;
+}
