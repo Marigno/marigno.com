@@ -1,3 +1,4 @@
+//src/components/SimpleButton.js
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 

@@ -1,3 +1,4 @@
+//src/components/SEO/SEO.jsx
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import urljoin from 'url-join';

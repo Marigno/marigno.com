@@ -1,10 +1,11 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Layout from "../layout/Layout"
-import styled from "@emotion/styled"
+//src/pages/links.jsx
+import React from "react";
+import { Helmet } from "react-helmet";
+import Layout from "../layout/Layout";
+import styled from "@emotion/styled";
 import { useTheme } from '@emotion/react';
 
-import { siteTitle } from "../../data/SiteConfig"
+import config from "../../data/SiteConfig";
 
 const LinksHeader = styled.div`
   display: flex;
@@ -42,7 +43,7 @@ const LinkWrapper = styled.div`
 const LinkContent = styled.a`
   display: flex;
   gap: 1rem;
-  align-items: center; // Change this line
+  align-items: center;
   text-decoration: none;
   color: inherit;
   width: 100%;
@@ -70,7 +71,7 @@ const LinksPage = () => {
   const theme = useTheme();
   return (
     <Layout>
-      <Helmet title={`Links | ${siteTitle}`} />
+      <Helmet title={`Links | ${config.siteTitle}`} />
 
       <LinksHeader>
         <img src="/myself.png" alt="Diego Marigno" />
@@ -103,7 +104,7 @@ const LinksPage = () => {
       </LinksContainer>
       <br/>
     </Layout>
-  )
-}
+  );
+};
 
-export default LinksPage
+export default LinksPage;

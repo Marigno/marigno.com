@@ -1,7 +1,8 @@
+//src/components/PostListing/PostListing.jsx
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-import Img from 'gatsby-image';
+import Img from 'gatsby-plugin-image';
 import { PostInfo } from '../PostInfo';
 
 const PostListing = ({ postList, isBig }) => {

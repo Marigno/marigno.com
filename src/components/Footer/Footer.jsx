@@ -1,3 +1,4 @@
+//src/components/Footer/Footer.jsx
 import React from 'react';
 import styled from '@emotion/styled';
 

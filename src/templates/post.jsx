@@ -1,7 +1,8 @@
+//src/templates/post.jsx
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import Img from 'gatsby-plugin-image';
 import styled from '@emotion/styled';
 
 import Layout from '../layout/Layout';

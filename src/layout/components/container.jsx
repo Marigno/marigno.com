@@ -1,3 +1,4 @@
+//src/layout/components/container.jsx
 import styled from '@emotion/styled';
 
 export const Container = styled.div`

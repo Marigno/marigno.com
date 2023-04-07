@@ -1,3 +1,4 @@
+//src/components/Footer/components/Icons.jsx
 import React from 'react';
 
 export const GithubIcon = () => (

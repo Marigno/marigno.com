@@ -1,3 +1,4 @@
+//src/components/SocialLinks/SocialLinks.jsx
 import React, { Component } from 'react';
 import {
   FacebookShareButton,

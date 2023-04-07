@@ -1,6 +1,6 @@
+//src/layout/components/globalStyles.jsx
 import React from 'react';
-import { Global, css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { Global, css, useTheme } from '@emotion/react';
 
 const GlobalStyles = () => {
   const theme = useTheme();

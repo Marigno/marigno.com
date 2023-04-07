@@ -1,3 +1,4 @@
+//data/SiteConfig.js
 const config = {
     siteTitle: 'Diego Marigno - Artist', // Site title.
     siteTitleShort: 'Diego Marigno', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.

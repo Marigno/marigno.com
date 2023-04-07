@@ -1,5 +1,6 @@
+//src/pages/about.jsx
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import Layout from '../layout/Layout';
 import styled from '@emotion/styled';
 
@@ -63,7 +64,7 @@ const AboutPage = () => {
 
       <h2>Freelancing</h2>
       <p>
-        I'm a part-time freelancer working on a wide variety of projects,
+        I'm a part-time freelancer working on a wide variety.
         helping people become better writers and marketers. If you'd like to work with me, just{' '}
         <a href='mailto:diego@marigno.com'>get in touch</a>.
       </p>

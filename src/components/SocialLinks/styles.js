@@ -1,3 +1,4 @@
+//src/components/SocialLinks/styles.js
 import styled from '@emotion/styled';
 
 export const StyledSocialLinks = styled.div`

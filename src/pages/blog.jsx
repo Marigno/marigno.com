@@ -1,5 +1,6 @@
+//src/pages/blog.jsx
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 
@@ -119,9 +120,8 @@ const BlogPage = props => {
             to={`/${cat}/`}
           >
             {cat.replace('-', ' ')}
-          </CategoryButton>
+            </CategoryButton>
         ))}
-
         <SearchLabel htmlFor='search-articles'>Search for articles</SearchLabel>
         <SearchContainer>
           <ArticlesSearch
@@ -150,7 +150,7 @@ export default BlogPage;
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
   query Blogquery {
-    posts: allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
+    posts: allMdx(sort: { fields: [fields___date], order: DESC }) {
       edges {
         node {
           fields {
@@ -164,16 +164,14 @@ export const listingQuery = graphql`
             categories
             cover {
               childImageSharp {
-                fluid(maxWidth: 650, maxHeight: 250, quality: 60) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 650, height: 250, quality: 60)
               }
             }
           }
         }
       }
     }
-    categories: allMarkdownRemark {
+    categories: allMdx {
       distinct(field: frontmatter___categories)
     }
   }

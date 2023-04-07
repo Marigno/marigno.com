@@ -1,5 +1,6 @@
+//src/pages/404.jsx
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
 import { Link, graphql } from 'gatsby';
 
@@ -13,7 +14,7 @@ import { usePostFields } from '../hooks/usePostFields';
 const H1 = styled.h1`
   margin-bottom: 2rem;
 `;
-const AboutPage = props => {
+const Page404 = props => {
   const latestPostsEdges = props.data.latest.edges;
   const latestPosts = usePostFields(latestPostsEdges);
 
@@ -65,4 +66,4 @@ export const listingQuery = graphql`
   }
 `;
 
-export default AboutPage;
+export default Page404;

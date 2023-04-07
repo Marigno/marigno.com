@@ -1,3 +1,4 @@
+//src/components/styles.js
 import styled from '@emotion/styled';
 
 export const SpacingContainer = styled.div`

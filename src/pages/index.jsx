@@ -1,12 +1,13 @@
+//src/pages/index.jsx
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import Layout from '../layout/Layout';
 import PostListing from '../components/PostListing/PostListing';
 import SEO from '../components/SEO/SEO';
-import { siteTitle } from '../../data/SiteConfig';
+import config from '../../data/SiteConfig';
 import { usePostFields } from '../hooks/usePostFields';
 import { useRandomEmoji } from '../hooks/useRandomEmoji';
 import { SimpleButton as ViewAll } from '../components/SimpleButton';
@@ -34,7 +35,7 @@ const IndexPage = props => {
     <Layout>
       <div className='listing-container'>
         <div className='posts-container'>
-          <Helmet title={siteTitle} />
+          <Helmet title={config.siteTitle} />
           <SEO />
           <div>
           <h1>Hi! I'm Diego {emoji}</h1>

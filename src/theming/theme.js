@@ -1,3 +1,4 @@
+//src/theming/theme.js
 const commonsStyles = {
   media: {
     desktop: 'min-width: 762px',

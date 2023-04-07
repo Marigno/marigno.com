@@ -1,13 +1,14 @@
+//src/pages/newsletter.jsx
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import Layout from '../layout/Layout';
 
-import { siteTitle } from '../../data/SiteConfig';
+import config from '../../data/SiteConfig';
 import { NewsletterIframe } from '../components/NewsletterIframe';
 
-const AboutPage = () => (
+const NewsletterPage = () => (
   <Layout>
-    <Helmet title={`Newsletter| ${siteTitle}`} />
+    <Helmet title={`Newsletter| ${config.siteTitle}`} />
 
     <h1>Newsletter</h1>
     <p>
@@ -20,4 +21,5 @@ const AboutPage = () => (
   </Layout>
 );
 
-export default AboutPage;
+export default NewsletterPage;
+

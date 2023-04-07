@@ -1,3 +1,4 @@
+//src/hooks/useRandomEmoji.js
 import React from 'react';
 
 const emojis = [

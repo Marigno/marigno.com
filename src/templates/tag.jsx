@@ -1,26 +1,27 @@
+//src/templates/tag.jsx
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layout/Layout';
 import PostListing from '../components/PostListing/PostListing';
 import config from '../../data/SiteConfig';
 
-export default class TagTemplate extends React.Component {
-  render() {
-    const { tag } = this.props.pageContext;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <Layout>
-        <div>
-          <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-          <PostListing postEdges={postEdges} />
-        </div>
-      </Layout>
-    );
-  }
-}
+const TagTemplate = ({ pageContext, data }) => {
+  const { tag } = pageContext;
+  const postEdges = data.allMarkdownRemark.edges;
 
-/* eslint no-undef: "off" */
+  return (
+    <Layout>
+      <div>
+        <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
+        <PostListing postEdges={postEdges} />
+      </div>
+    </Layout>
+  );
+};
+
+export default TagTemplate;
+
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(
@@ -42,9 +43,7 @@ export const pageQuery = graphql`
             tags
             cover {
               childImageSharp {
-                fixed(width: 150, height: 150) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 150, height: 150, layout: FIXED)
               }
             }
             date
