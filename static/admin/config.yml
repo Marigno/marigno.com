@@ -1,18 +1,19 @@
 backend:
-  name: github
+  name: git-gateway
   repo: Marigno/marigno.com
+  branch: master
 
-media_folder: static/assets
-public_folder: assets
+media_folder: 'static/assets'
+public_folder: '/assets'
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
-      - { name: body, label: Body, widget: markdown }
+      - { name: 'path', label: 'Path' }
+      - { name: 'date', label: 'Date', widget: 'datetime' }
+      - { name: 'title', label: 'Title', widget: 'string' }
+      - { name: 'description', label: 'Description', widget: 'string' }
+      - { name: 'body', label: 'Body', widget: 'markdown' }
