@@ -3,7 +3,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Layout from "../layout/Layout";
 import styled from "@emotion/styled";
-import { useTheme } from '@emotion/react';
 
 import config from "../../data/SiteConfig";
 
@@ -68,7 +67,6 @@ const LinkContent = styled.a`
 `;
 
 const LinksPage = () => {
-  const theme = useTheme();
   return (
     <Layout>
       <Helmet title={`Links | ${config.siteTitle}`} />

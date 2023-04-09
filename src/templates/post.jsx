@@ -2,12 +2,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from '@emotion/styled';
-
 import Layout from '../layout/Layout';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
-import SEO from '../components/SEO/SEO';
+import Seo from '../components/SEO/Seo';
 import config from '../../data/SiteConfig';
 import { PostRead } from '../components/PostRead';
 import { PostDate} from '../components/PostDate';
@@ -20,25 +19,28 @@ const PostTemplate = props => {
   const { slug } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
-  const { fancyDate, fileName } = postNode.fields;
-  const githubLink = `${config.repo}/blob/master/content/posts/${fileName}.md`;
+  const { fancyDate } = postNode.fields;
+  //const githubLink = `${config.repo}/blob/master/content/posts/${fileName}.md`;
 
-const PostEnd = styled.div`
-display: flex;
-`;
+  const PostEnd = styled.div`
+    display: flex;
+  `;
 
-const TextEnd = styled.div`
-text-align: right;
-`;
+  const TextEnd = styled.div`
+    text-align: right;
+  `;
 
-const EndTitle = styled.span`
-font-size: 12px;
-`;
+  const EndTitle = styled.span`
+    font-size: 12px;
+  `;
 
-const FirstEnd = styled.div`
-flex-grow: 1;
-`;
+  const FirstEnd = styled.div`
+    flex-grow: 1;
+  `;
 
+  const PostContent = styled.div`
+    text-align: justify;
+  `;
 
   return (
     <Layout>
@@ -46,9 +48,9 @@ flex-grow: 1;
         title={`${post.title} | ${config.siteTitle}`}
         description={postNode.excerpt}
       />
-      <SEO postPath={slug} postNode={postNode} postSEO />
+      <Seo postPath={slug} postNode={postNode} postSEO />
       <Article>
-        {post.cover && <Img fluid={post.cover.childImageSharp.fluid} />}
+        {post.cover && <GatsbyImage image={post.cover.childImageSharp.gatsbyImageData} alt={post.title} />}
 
         <SpacingContainer as='h1' marginBottom={0}>
           {post.title}
@@ -68,12 +70,12 @@ flex-grow: 1;
             ))}
           </small>
         </SpacingContainer>
-        <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+        <PostContent dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <PostEnd>
-           <FirstEnd><EndTitle>{'SHARE THIS NOW'}</EndTitle>
+          <FirstEnd><EndTitle>{'SHARE THIS NOW'}</EndTitle>
           <SocialLinks postPath={slug} postNode={postNode} /></FirstEnd>
-           <TextEnd><EndTitle>{'WRITTEN ON:'}</EndTitle>
-           <PostDate date={fancyDate} /></TextEnd>
+          <TextEnd><EndTitle>{'WRITTEN ON:'}</EndTitle>
+          <PostDate date={fancyDate} /></TextEnd>
         </PostEnd>
         <NewsletterIframe margin={'0 0 1.4rem'} />
       </Article>
@@ -97,9 +99,7 @@ export const pageQuery = graphql`
         picture
         cover {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 85) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 650, quality: 85)
           }
         }
       }

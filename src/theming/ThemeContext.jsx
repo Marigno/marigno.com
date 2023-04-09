@@ -22,7 +22,7 @@ export const ThemeContextProvider = ({ children }) => {
       typeof window !== 'undefined' ? localStorage.getItem('oDarkMode') : false;
 
     setDarkMode(darkModePreference === 'true');
-  });
+  }, []);
 
   return (
     <ThemeContext.Provider value={contextValue}>

@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 
 import Layout from '../layout/Layout';
 import PostListing from '../components/PostListing/PostListing';
-import SEO from '../components/SEO/SEO';
+import Seo from '../components/SEO/Seo';
 import config from '../../data/SiteConfig';
 import { usePostFields } from '../hooks/usePostFields';
 import { useRandomEmoji } from '../hooks/useRandomEmoji';
@@ -36,7 +36,7 @@ const IndexPage = props => {
       <div className='listing-container'>
         <div className='posts-container'>
           <Helmet title={config.siteTitle} />
-          <SEO />
+          <Seo />
           <div>
           <h1>Hi! I'm Diego {emoji}</h1>
             <SpacingContainer as={'p'} marginBottom={'4px'}>
@@ -92,7 +92,7 @@ export const listingQuery = graphql`
             categories
             cover {
               childImageSharp {
-                gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED, aspectRatio: 1)
+                gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED)
               }
             }
             title
@@ -116,7 +116,7 @@ export const listingQuery = graphql`
             categories
             cover {
               childImageSharp {
-                gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED, aspectRatio: 1)
+                gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED)
               }
             }
             title

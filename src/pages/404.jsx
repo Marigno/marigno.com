@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../layout/Layout';
 
@@ -37,11 +37,8 @@ const Page404 = props => {
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
-  query Page404 {
-    latest: allMarkdownRemark(
-      sort: { fields: [fields___date], order: DESC }
-      limit: 6
-    ) {
+query Page404 {
+  latest: allMarkdownRemark(sort: {fields: {date: DESC}}, limit: 6) {
       edges {
         node {
           fields {

@@ -47,9 +47,7 @@ export const pageQuery = graphql`
             tags
             cover {
               childImageSharp {
-                fluid(maxWidth: 650, maxHeight: 250, quality: 60) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 650, height: 250, quality: 60)
               }
             }
             date

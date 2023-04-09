@@ -5,7 +5,6 @@ import styled from '@emotion/styled';
 import config from '../../../data/SiteConfig';
 import { Container } from '../../layout/components/container';
 import {
-  GithubIcon,
   TwitterIcon,
   RssIcon,
   GoodreadsIcon,

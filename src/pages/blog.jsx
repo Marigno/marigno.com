@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 
 import Layout from '../layout/Layout';
 import PostListing from '../components/PostListing/PostListing';
-import SEO from '../components/SEO/SEO';
+import Seo from '../components/SEO/Seo';
 import { siteTitle } from '../../data/SiteConfig';
 import { usePostFields } from '../hooks/usePostFields';
 import {
@@ -95,7 +95,7 @@ const BlogPage = props => {
     }
 
     return postList;
-  }, [category, search]);
+  }, [category, search, postFields]);
 
   return (
     <Layout>
@@ -137,7 +137,7 @@ const BlogPage = props => {
       <div className='listing-container'>
         <div className='posts-container'>
           <Helmet title={`Articles - ${siteTitle}`} />
-          <SEO />
+          <Seo />
           <PostListing postList={allPosts.slice(0, articlesToShow)} isBig />
         </div>
       </div>

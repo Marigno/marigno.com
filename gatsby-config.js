@@ -18,7 +18,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-image', // New in Gatsby v5
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
     'gatsby-plugin-emotion',
     {
