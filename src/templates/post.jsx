@@ -6,7 +6,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from '@emotion/styled';
 import Layout from '../layout/Layout';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
-import Seo from '../components/SEO/Seo';
+import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import { PostRead } from '../components/PostRead';
 import { PostDate} from '../components/PostDate';
@@ -48,7 +48,7 @@ const PostTemplate = props => {
         title={`${post.title} | ${config.siteTitle}`}
         description={postNode.excerpt}
       />
-      <Seo postPath={slug} postNode={postNode} postSEO />
+      <SEO postPath={slug} postNode={postNode} postSEO />
       <Article>
         {post.cover && <GatsbyImage image={post.cover.childImageSharp.gatsbyImageData} alt={post.title} />}
 

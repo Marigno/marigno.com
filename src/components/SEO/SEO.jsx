@@ -1,10 +1,10 @@
-//src/components/SEO/Seo.jsx
+//src/components/SEO/SEO.jsx
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import urljoin from 'url-join';
 import config from '../../../data/SiteConfig';
 
-class Seo extends Component {
+class SEO extends Component {
   render() {
     const { postNode, postPath, postSEO } = this.props;
     let title;
@@ -117,4 +117,4 @@ class Seo extends Component {
   }
 }
 
-export default Seo;
+export default SEO;

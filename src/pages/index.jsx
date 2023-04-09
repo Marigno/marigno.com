@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 
 import Layout from '../layout/Layout';
 import PostListing from '../components/PostListing/PostListing';
-import Seo from '../components/SEO/Seo';
+import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import { usePostFields } from '../hooks/usePostFields';
 import { useRandomEmoji } from '../hooks/useRandomEmoji';
@@ -36,7 +36,7 @@ const IndexPage = props => {
       <div className='listing-container'>
         <div className='posts-container'>
           <Helmet title={config.siteTitle} />
-          <Seo />
+          <SEO />
           <div>
           <h1>Hi! I'm Diego {emoji}</h1>
             <SpacingContainer as={'p'} marginBottom={'4px'}>
