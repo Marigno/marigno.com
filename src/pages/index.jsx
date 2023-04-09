@@ -76,53 +76,50 @@ export default IndexPage;
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
-  query ListingQuery {
-    latest: allMarkdownRemark(
-      sort: { fields: [fields___date], order: DESC }
-      limit: 6
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            date: shortDate
-          }
-          timeToRead
-          frontmatter {
-            categories
-            cover {
-              childImageSharp {
-                gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED)
-              }
-            }
-            title
-          }
+query ListingQuery {
+  latest: allMarkdownRemark(sort: {fields: {date: DESC}}, limit: 6) {
+    edges {
+      node {
+        fields {
+          slug
+          date: shortDate
         }
-      }
-    }
-    popular: allMarkdownRemark(
-      sort: { fields: [fields___date], order: DESC }
-      limit: 6
-      filter: { frontmatter: { categories: { eq: "popular" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            date: shortDate
-          }
-          timeToRead
-          frontmatter {
-            categories
-            cover {
-              childImageSharp {
-                gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED)
-              }
+        timeToRead
+        frontmatter {
+          categories
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED)
             }
-            title
           }
+          title
         }
       }
     }
   }
+  popular: allMarkdownRemark(
+    sort: {fields: {date: DESC}}
+    limit: 6
+    filter: {frontmatter: {categories: {eq: "popular"}}}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          date: shortDate
+        }
+        timeToRead
+        frontmatter {
+          categories
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 70, height: 70, quality: 60, layout: FIXED)
+            }
+          }
+          title
+        }
+      }
+    }
+  }
+}
 `;

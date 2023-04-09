@@ -149,30 +149,30 @@ export default BlogPage;
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
-  query Blogquery {
-    posts: allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
-      edges {
-        node {
-          fields {
-            date: fancyDate
-            slug
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            categories
-            cover {
-              childImageSharp {
-                gatsbyImageData(width: 650, height: 250, quality: 60)
-              }
+query Blogquery {
+  posts: allMarkdownRemark(sort: {fields: {date: DESC}}) {
+    edges {
+      node {
+        fields {
+          date: fancyDate
+          slug
+        }
+        excerpt
+        timeToRead
+        frontmatter {
+          title
+          categories
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 650, height: 250, quality: 60)
             }
           }
         }
       }
     }
-    categories: allMarkdownRemark {
-      distinct(field: frontmatter___categories)
-    }
   }
+  categories: allMarkdownRemark {
+    distinct(field: {frontmatter: {categories: SELECT}})
+  }
+}
 `;

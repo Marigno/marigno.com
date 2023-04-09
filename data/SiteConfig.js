@@ -10,7 +10,8 @@ const config = {
       "Personal site by Diego Marigno. Art, photography, technolopgy and more.", // Website description used for RSS feeds/meta description tag.
     siteRss: '/rss.xml', // Path to the RSS file.
     siteFBAppID: '', // FB Application ID for using app insights
-    googleAnalyticsID: 'UA-83648832-1', // GA tracking ID.
+    googleMeasurementID: 'G-W20Q9HP43E',
+    googleGtagID: 'AW-452409511', // GA tracking ID.
     disqusShortname: '', // Disqus shortname.
     dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
     dateFancyFormat: 'MMMM Do, YYYY', // Fancy date format used to stylize

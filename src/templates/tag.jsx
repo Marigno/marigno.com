@@ -23,33 +23,33 @@ const TagTemplate = ({ pageContext, data }) => {
 export default TagTemplate;
 
 export const pageQuery = graphql`
-  query TagPage($tag: String) {
-    allMarkdownRemark(
-      limit: 1000
-      sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          fields {
-            slug
-            date: fancyDate
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            cover {
-              childImageSharp {
-                gatsbyImageData(width: 150, height: 150, layout: FIXED)
-              }
+query TagPage($tag: String) {
+  allMarkdownRemark(
+    limit: 1000
+    sort: {fields: {date: DESC}}
+    filter: {frontmatter: {tags: {in: [$tag]}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        fields {
+          slug
+          date: fancyDate
+        }
+        excerpt
+        timeToRead
+        frontmatter {
+          title
+          tags
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 150, height: 150, layout: FIXED)
             }
-            date
           }
+          date
         }
       }
     }
   }
+}
 `;

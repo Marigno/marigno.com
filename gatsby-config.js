@@ -64,9 +64,34 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: config.googleAnalyticsID,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          config.googleMeasurementID,// Google Analytics / GA
+          config.googleAnalyticsID, // Google Ads / Adwords / AW
+          //"DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+        ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          optimize_id: "OPT_CONTAINER_ID",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          // Defaults to https://www.googletagmanager.com
+          origin: "YOUR_SELF_HOSTED_ORIGIN",
+          // Delays processing pageview events on route update (in milliseconds)
+          delayOnRouteUpdate: 0,
+        },
       },
     },
     {
@@ -107,9 +132,9 @@ module.exports = {
       resolve: 'gatsby-plugin-remove-serviceworker',
     },
           {
-            resolve: 'netlify-cms-app',
+            resolve: '@staticcms/core',
             options: {
-              modulePath: path.resolve('src/netlifycms/index.js'),      
+              modulePath: path.resolve('src/staticcms/index.js'),      
                 enableIdentityWidget: true,
                 publicPath: 'admin',
                 htmlTitle: 'Content Manager',

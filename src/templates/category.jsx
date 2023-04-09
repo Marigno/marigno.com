@@ -27,36 +27,36 @@ export default CategoryTemplate;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query CategoryPage($category: String) {
-    posts: allMarkdownRemark(
-      limit: 1000
-      sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { categories: { eq: $category } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          fields {
-            slug
-            date: fancyDate
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            cover {
-              childImageSharp {
-                gatsbyImageData(width: 650, height: 250, quality: 60)
-              }
+query CategoryPage($category: String) {
+  posts: allMarkdownRemark(
+    limit: 1000
+    sort: {fields: {date: DESC}}
+    filter: {frontmatter: {categories: {eq: $category}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        fields {
+          slug
+          date: fancyDate
+        }
+        excerpt
+        timeToRead
+        frontmatter {
+          title
+          tags
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 650, height: 250, quality: 60)
             }
-            date
           }
+          date
         }
       }
     }
-    categories: allMarkdownRemark {
-      distinct(field: frontmatter___categories)
-    }
   }
+  categories: allMarkdownRemark {
+    distinct(field: {frontmatter: {categories: SELECT}})
+  }
+}
 `;
