@@ -3,7 +3,7 @@ backend:
   repo: Marigno/marigno.com
   branch: master
 
-media_folder: 'static/assets'
+media_folder: 'content/images'
 public_folder: '/assets'
 
 collections:
@@ -12,8 +12,9 @@ collections:
     folder: 'content/posts'
     create: true
     fields:
-      - { name: 'path', label: 'Path' }
-      - { name: 'date', label: 'Date', widget: 'datetime' }
       - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'description', label: 'Description', widget: 'string' }
+      - { name: 'author', label: 'Author', widget: 'string' }
+      - { name: 'date', label: 'Date', widget: 'datetime' }
+      - { name: 'picture', label: 'Picture desc', widget: 'string' }
+      - { name: 'cover', label: 'Image', widget: 'image' }
       - { name: 'body', label: 'Body', widget: 'markdown' }
