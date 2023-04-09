@@ -132,7 +132,7 @@ module.exports = {
       resolve: 'gatsby-plugin-remove-serviceworker',
     },
           {
-            resolve: '@staticcms/core',
+            resolve: 'gatsby-plugin-static-cms',
             options: {
               modulePath: path.resolve('src/staticcms/index.js'),      
                 enableIdentityWidget: true,
