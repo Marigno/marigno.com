@@ -1,6 +1,10 @@
 // gatsby-config.js
 const path = require('path');
 const config = require('./data/SiteConfig');
+//const { createProxyMiddleware } = require("http-proxy-middleware");
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 module.exports = {
   pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,

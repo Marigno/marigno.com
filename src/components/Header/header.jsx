@@ -136,6 +136,9 @@ export const Header = () => {
           <HeaderLink as={Link} to='/links/'>
             Links
           </HeaderLink>
+          <HeaderLink as={Link} to='/nft/'>
+            Work Created
+          </HeaderLink>
           <MobileHeaderLink href='https://twitter.com/marigno_'>
             @marigno_
           </MobileHeaderLink>
