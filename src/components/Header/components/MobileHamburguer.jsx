@@ -8,7 +8,7 @@ export const StyledHamburguer = styled.div`
     display: none;
   }
 
-  position: fixed;
+  position: absolute;
   right: 0;
 
   /*!
