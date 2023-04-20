@@ -6,6 +6,8 @@ import Layout from "../layout/Layout";
 import styled from "@emotion/styled";
 import axios from "axios";
 import config from "../../data/SiteConfig";
+import getWeb3 from "../utils/web3";
+import erc721Abi from "../erc721Abi";
 
 const NFTHeader = styled.div`
   display: flex;
@@ -56,58 +58,51 @@ const NFTPage = () => {
   
   useEffect(() => {
     const fetchNfts = async () => {
+      const corsProxy = "http://localhost:8080/";
       const walletAddress = "0x08255e706F23aB1F5703Eb717d8CfB5d097aE0F6";
-      const collectionAddress = ["0x94D3188C143b6E544A1D5D375D27FF81c72A38c7", "0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405", "0x60F80121C31A0d46B5279700f9DF786054aa5eE5"];
-      const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}/getNFTs/`;
-      const fetchURL = `${baseURL}?owner=${walletAddress}&contractAddresses%5B%5D=${collectionAddress}`;
-      console.log(fetchURL);
-      try {
-        const nftData = await fetch(fetchURL, {
-          method: "GET",
-        }).then((data) => data.json());
-      
-        if (nftData) {
-          console.log("NFT data:");
-          console.log(nftData.ownedNfts);
-          const metadataWithIpfsImages = await Promise.all(nftData.ownedNfts.map(async (nft) => {
-            try {
-              let imgSrc;
-              const imageUrl = nft.media[0].gateway;
-  
-              if (imageUrl.startsWith("ipfs://")) {
-                const ipfsHash = imageUrl.replace("ipfs://", "");
-                const ipfsUrl = `https://cloudflare-ipfs.com/ipfs/${ipfsHash}`;
-                const ipfsResponse = await axios.get(`${corsProxy}${ipfsUrl}`, {
-                  responseType: "arraybuffer",
-                });
-                const ipfsContentType = ipfsResponse.headers["content-type"];
-                const base64Image = Buffer.from(ipfsResponse.data, "binary").toString("base64");
-                imgSrc = `data:${ipfsContentType};base64,${base64Image}`;
-              } else {
-                imgSrc = imageUrl;
-              }
-  
-              return {
-                tokenId: parseInt(nft.id.tokenId, 16),
-                image: imgSrc,
-                title: nft.title,
-                description: nft.description,
-                contractAddress: nft.contract.address,
-                collectionName: nft.contractMetadata.name,
-              };
-            } catch (error) {
-              console.log(error);
-              return null;
-            }
-          }));
-  
-          setNfts(metadataWithIpfsImages.filter(nft => nft !== null));
+      const contractAddresses = [
+        "0x94D3188C143b6E544A1D5D375D27FF81c72A38c7",
+        "0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405",
+        "0x60F80121C31A0d46B5279700f9DF786054aa5eE5",
+      ];
+      let fetchedNfts = [];
+    
+      const web3 = await getWeb3();
+    
+      for (const contractAddress of contractAddresses) {
+        const contract = new web3.eth.Contract(erc721Abi, contractAddress);
+        let balance;
+    
+        try {
+          balance = await contract.methods.balanceOf(walletAddress).call();
+        } catch (error) {
+          console.error(`Error fetching balance for contract ${contractAddress}:`, error);
+          continue;
         }
-      } catch (error) {
-        console.error("Error fetching NFT data:", error);
+    
+        for (let i = 0; i < balance; i++) {
+          try {
+            const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, i).call();
+            const tokenURI = await contract.methods.tokenURI(tokenId).call();
+            const tokenMetadata = await axios.get(`${corsProxy}${tokenURI}`).then((response) => response.data);
+    
+            fetchedNfts.push({
+              tokenId,
+              image: tokenMetadata.image,
+              title: tokenMetadata.name,
+              description: tokenMetadata.description,
+              contractAddress: contractAddress,
+              collectionName: tokenMetadata.collection,
+            });
+          } catch (error) {
+            console.error(`Error fetching token at index ${i} for contract ${contractAddress}:`, error);
+          }
+        }
       }
+    
+      setNfts(fetchedNfts);
     };
-  
+    
     fetchNfts();
   }, []);
 

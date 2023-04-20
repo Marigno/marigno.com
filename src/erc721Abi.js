@@ -11,7 +11,7 @@ const erc721Abi = [
       "name": "balanceOf",
       "outputs": [
         {
-          "name": "",
+          "name": "balance",
           "type": "uint256"
         }
       ],
@@ -53,7 +53,7 @@ const erc721Abi = [
       "name": "tokenURI",
       "outputs": [
         {
-          "name": "",
+          "name": "uri",
           "type": "string"
         }
       ],
