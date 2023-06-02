@@ -74,7 +74,7 @@ const LinksPage = () => {
       <LinksHeader>
         <img src="/myself.png" alt="Diego Marigno" />
         <h1>Diego Marigno</h1>
-        <p>Artist and photographer</p>
+        <h2>Artist and polyglot</h2>
         <p>I capture images of what I like.</p>
       </LinksHeader>
 
