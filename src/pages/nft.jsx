@@ -1,13 +1,10 @@
 //src/pages/nft.jsx
 import React, { useEffect, useState } from "react";
-import { Buffer } from "buffer";
 import { Helmet } from "react-helmet";
 import Layout from "../layout/Layout";
 import styled from "@emotion/styled";
 import axios from "axios";
 import config from "../../data/SiteConfig";
-import getWeb3 from "../utils/web3";
-import erc721Abi from "../erc721Abi";
 
 const NFTHeader = styled.div`
   display: flex;
@@ -55,94 +52,73 @@ const CollectionInfo = styled.div`
 const NFTPage = () => {
   const corsProxy = "http://localhost:8080/";
   const [nfts, setNfts] = useState([]);
-  
+
   useEffect(() => {
     const fetchNfts = async () => {
-      const corsProxy = "http://localhost:8080/";
       const walletAddress = "0x08255e706F23aB1F5703Eb717d8CfB5d097aE0F6";
-      const contractAddresses = [
-        "0x94D3188C143b6E544A1D5D375D27FF81c72A38c7",
-        "0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405",
-        "0x60F80121C31A0d46B5279700f9DF786054aa5eE5",
-      ];
-      let fetchedNfts = [];
     
-      const web3 = await getWeb3();
+      try {
+        const response = await axios.get(`${corsProxy}https://api.opensea.io/api/v1/assets?owner=${walletAddress}&order_direction=desc&offset=0&limit=50`);
     
-      for (const contractAddress of contractAddresses) {
-        const contract = new web3.eth.Contract(erc721Abi, contractAddress);
-        let balance;
+        if (response.data) {
+          console.log("Response data:");
+          console.log(response.data);
+          const nftsData = response.data.assets;
+          const metadataWithImages = nftsData.map((nft) => ({
+            tokenId: parseInt(nft.token_id, 10),
+            image: nft.image_url,
+            title: nft.name,
+            contractAddress: nft.asset_contract.address,
+            collectionName: nft.collection.name,
+          }));
     
-        try {
-          balance = await contract.methods.balanceOf(walletAddress).call();
-        } catch (error) {
-          console.error(`Error fetching balance for contract ${contractAddress}:`, error);
-          continue;
+          // Filter NFTs created by you
+          const createdNfts = metadataWithImages.filter(nft => nft.contractAddress.toLowerCase() === walletAddress.toLowerCase());
+          setNfts(createdNfts);
         }
-    
-        for (let i = 0; i < balance; i++) {
-          try {
-            const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, i).call();
-            const tokenURI = await contract.methods.tokenURI(tokenId).call();
-            const tokenMetadata = await axios.get(`${corsProxy}${tokenURI}`).then((response) => response.data);
-    
-            fetchedNfts.push({
-              tokenId,
-              image: tokenMetadata.image,
-              title: tokenMetadata.name,
-              description: tokenMetadata.description,
-              contractAddress: contractAddress,
-              collectionName: tokenMetadata.collection,
-            });
-          } catch (error) {
-            console.error(`Error fetching token at index ${i} for contract ${contractAddress}:`, error);
-          }
-        }
+      } catch (error) {
+        console.error("Error fetching NFT data:", error);
       }
-    
-      setNfts(fetchedNfts);
     };
-    
+
     fetchNfts();
   }, []);
 
   const NFT = ({ nft }) => {
-    const openSeaCollectionUrl = `https://opensea.io/collection/${nft.collectionName.toLowerCase()}`;
-    const openSeaNFTUrl = `https://opensea.io/assets/ethereum/${nft.contractAddress}/${nft.tokenId}`;
+    const openSeaCollectionUrl = `https://opensea.io/collection/${nft.tokenSymbol.toLowerCase()}`;
+    const openSeaNFTUrl = `https://opensea.io/assets/ethereum/${nft.contractAddress}/${nft.tokenID}`;
     return (
       <NFTWrapper>
         <a href={openSeaNFTUrl} target="_blank" rel="noopener noreferrer">
-          <h3>{nft.title}</h3>
+          <h3>{nft.tokenName}</h3>
         </a>
-        <img src={nft.image} alt={nft.title} />
         <CollectionInfo>
-          Collection:{" "}
-          <a href={openSeaCollectionUrl} target="_blank" rel="noopener noreferrer">
-            <h4>{nft.collectionName}</h4>
-          </a>
-        </CollectionInfo>
-        <p>{nft.description}</p>
-      </NFTWrapper>
+            Collection:{" "}
+            <a href={openSeaCollectionUrl} target="_blank" rel="noopener noreferrer">
+              <h4>{nft.tokenSymbol}</h4>
+            </a>
+          </CollectionInfo>
+        </NFTWrapper>
+      );
+    };
+
+    return (
+      <Layout>
+        <Helmet title={`NFTs | ${config.siteTitle}`} />
+
+        <NFTHeader>
+          <h1>NFTs</h1>
+          <p>Artist and photographer</p>
+          <p>I capture images of what I like.</p>
+        </NFTHeader>
+
+        <NFTContainer>
+          {nfts.map((nft, index) => (
+            <NFT key={index} nft={nft} />
+          ))}
+        </NFTContainer>
+      </Layout>
     );
   };
-  
-  return (
-    <Layout>
-      <Helmet title={`NFTs | ${config.siteTitle}`} />
 
-      <NFTHeader>
-        <h1>NFTs</h1>
-        <p>Artist and photographer</p>
-        <p>I capture images of what I like.</p>
-      </NFTHeader>
-
-      <NFTContainer>
-      {nfts.map((nft, index) => (
-        <NFT key={index} nft={nft} />
-      ))}
-    </NFTContainer>
-    </Layout>
- );
-};
-
-export default NFTPage;
+  export default NFTPage;
