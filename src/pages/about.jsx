@@ -35,7 +35,7 @@ const AboutPage = () => {
         <div>
           <h1>Hey, I'm Diego</h1>
           <p>
-            I'm an artist and polyglot. I'm constantly learning and evolving. The arts I enjoy most are writing, coding and photography.
+            I'm an artist and polyglot. I enjoy most: writing, coding and photography.
           </p>
         </div>
         <img src='/myself.png' alt='Diego Marigno' />
@@ -54,18 +54,17 @@ const AboutPage = () => {
       <h2>This place</h2>
       <p>
         Here you'll find articles about my ideas, thoughts and everything else that I consider worthwhile. 
-        It's been {age} years since I've been writing.
+        It's been {age} years since I've been writing and coding.
       </p>
 
       <p>
         I'm passionate about life in general. I like to go beyond, and if you find me, 
-        you would most probably encounter me day-dreaming! 
+        you would most probably encounter me day-dreaming, or thinking how to solve a code problem!
       </p>
 
       <h2>Freelancing</h2>
       <p>
-        I'm a part-time freelancer working on a wide variety.
-        helping people become better writers and marketers. If you'd like to work with me, just{' '}
+        I'm a part-time freelancer working on a wide variety of projects, helping people become better writers and thinkers. If you'd like to work with me, just{' '}
         <a href='mailto:diego@marigno.com'>get in touch</a>.
       </p>
 
