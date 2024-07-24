@@ -35,7 +35,7 @@ const AboutPage = () => {
         <div>
           <h1>Hey, I'm Diego</h1>
           <p>
-            I'm an artist and polyglot. I enjoy most: writing, coding and photography.
+            I'm an artist and polyglot. What I enjoy most is writing, coding and photography.
           </p>
         </div>
         <img src='/myself.png' alt='Diego Marigno' />
