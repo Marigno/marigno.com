@@ -11,7 +11,6 @@ import config from '../../data/SiteConfig';
 import { usePostFields } from '../hooks/usePostFields';
 import { useRandomEmoji } from '../hooks/useRandomEmoji';
 import { SimpleButton as ViewAll } from '../components/SimpleButton';
-import { NewsletterIframe } from '../components/NewsletterIframe';
 import { SpacingContainer } from '../components/styles';
 
 const IndexViewAll = styled(ViewAll)`
@@ -64,8 +63,6 @@ const IndexPage = props => {
             <PostListing postList={popularPosts} />
           </section>
         </div>
-        
-        <NewsletterIframe margin={'0 0 1.4rem'} />
        
       </div>
     </Layout>

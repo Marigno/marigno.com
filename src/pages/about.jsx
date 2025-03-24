@@ -5,7 +5,6 @@ import Layout from '../layout/Layout';
 import styled from '@emotion/styled';
 
 import { siteTitle } from '../../data/SiteConfig';
-import { NewsletterIframe } from '../components/NewsletterIframe';
 
 const AboutMe = styled.div`
   display: flex;
@@ -79,7 +78,6 @@ const AboutPage = () => {
         Follow all my new articles and updates via my newsletter. You'll receive
         emails <i>only</i> for my new articles. Unsubscribe anytime.
       </p>
-      <NewsletterIframe />
     </Layout>
   );
   };

@@ -10,7 +10,6 @@ import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import { PostRead } from '../components/PostRead';
 import { PostDate} from '../components/PostDate';
-import { NewsletterIframe } from '../components/NewsletterIframe';
 import { Article } from './styles';
 import { SpacingContainer } from '../components/styles';
 
@@ -77,7 +76,6 @@ const PostTemplate = props => {
           <TextEnd><EndTitle>{'WRITTEN ON:'}</EndTitle>
           <PostDate date={fancyDate} /></TextEnd>
         </PostEnd>
-        <NewsletterIframe margin={'0 0 1.4rem'} />
       </Article>
     </Layout>
   );
