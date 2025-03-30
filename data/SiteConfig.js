@@ -7,7 +7,7 @@ const config = {
     siteUrl: 'https://marigno.com', // Domain of your website without pathPrefix.
     pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
     siteDescription:
-      "Personal site by Diego Marigno. Art, photography, technolopgy and more.", // Website description used for RSS feeds/meta description tag.
+      "Personal site by Diego Marigno. Code, technology, photography and more.", // Website description used for RSS feeds/meta description tag.
     siteRss: '/rss.xml', // Path to the RSS file.
     siteFBAppID: '', // FB Application ID for using app insights
     googleMeasurementID: 'G-W20Q9HP43E',
