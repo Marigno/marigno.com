@@ -34,7 +34,7 @@ const AboutPage = () => {
         <div>
           <h1>Hey, I'm Diego</h1>
           <p>
-            I'm an artist and polyglot. What I enjoy most is writing, coding and photography.
+            I'm a thinker and polyglot. What I enjoy most is writing, coding and photography.
           </p>
         </div>
         <img src='/myself.png' alt='Diego Marigno' />
@@ -61,22 +61,15 @@ const AboutPage = () => {
         you would most probably encounter me day-dreaming, or thinking how to solve a code problem!
       </p>
 
-      <h2>Freelancing</h2>
+      <h2>Solo building</h2>
       <p>
-        I'm a part-time freelancer working on a wide variety of projects, helping people become better writers and thinkers. If you'd like to work with me, just{' '}
-        <a href='mailto:diego@marigno.com'>get in touch</a>.
+        I'm a solo builder, too. In 2023, I started a financial app by myself to remplace all my spreadsheets. <a href="https://vissu.app">Vissu</a> was born.
       </p>
 
       <h2>Contacting me</h2>
       <p>
         You can reach out to me on{' '}
-        <a href='https://twitter.com/marigno_'>Twitter</a>.
-      </p>
-
-      <h2>Newsletter</h2>
-      <p>
-        Follow all my new articles and updates via my newsletter. You'll receive
-        emails <i>only</i> for my new articles. Unsubscribe anytime.
+        <a href='https://twitter.com/diegomarigno'>Twitter</a>.
       </p>
     </Layout>
   );

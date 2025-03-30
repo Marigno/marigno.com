@@ -16,7 +16,7 @@ const Footer = () => (
     <FooterContainer>
       <Container>
         <FooterLink
-          href='https://twitter.com/marigno_'
+          href='https://twitter.com/diegomarigno'
           target='_blank'
           rel='noreferrer nofollow'
           title='Follow me on Twitter'

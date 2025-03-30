@@ -39,7 +39,7 @@ const IndexPage = props => {
           <div>
           <h1>Hi! I'm Diego {emoji}</h1>
             <SpacingContainer as={'p'} marginBottom={'4px'}>
-            I'm an artist and polyglot. Here you'll find thoughts, poetry, and pictures. All images were taken by me. 
+            I'm a thinker and polyglot. Here you'll find thoughts, ideas, and pictures. All images were taken by me. 
             </SpacingContainer>
           </div>
           <Link to='/about/'>
