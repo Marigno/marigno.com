@@ -133,7 +133,7 @@ export const Header = () => {
           <HeaderLink as={Link} to='/about/'>
             About
           </HeaderLink>
-          <MobileHeaderLink href='https://twitter.com/diegomarigno'>
+          <MobileHeaderLink href='https://x.com/diegomarigno'>
             @diegomarigno
           </MobileHeaderLink>
           <ToggleTheme />

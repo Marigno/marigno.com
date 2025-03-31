@@ -69,7 +69,7 @@ const AboutPage = () => {
       <h2>Contacting me</h2>
       <p>
         You can reach out to me on{' '}
-        <a href='https://twitter.com/diegomarigno'>Twitter</a>.
+        <a href='https://x.com/diegomarigno'>X</a>.
       </p>
     </Layout>
   );
