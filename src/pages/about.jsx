@@ -43,7 +43,7 @@ const AboutPage = () => {
       <h2>Photography</h2>
       <p>
        Pictures are our memories from eternity, and
-       I believe that everything that's worth telling can be encaptured in a photo. 
+       I believe that everything that's worth telling can be captured in a photo. 
       </p>
       <p>
         All images that you may find on this website were taken by me.
@@ -63,7 +63,7 @@ const AboutPage = () => {
 
       <h2>Solo building</h2>
       <p>
-        I'm a solo builder, too. In 2023, I started a financial app by myself to remplace all my spreadsheets. <a href="https://vissu.app">Vissu</a> was born.
+        I'm a solo builder, too. In 2023, I started a financial app by myself to replace all my spreadsheets. <a href="https://vissu.app">Vissu</a> was born.
       </p>
 
       <h2>Contacting me</h2>
