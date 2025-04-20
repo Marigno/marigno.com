@@ -37,7 +37,7 @@ const AboutPage = () => {
             I'm a thinker and polyglot. What I enjoy most is writing, coding and photography.
           </p>
         </div>
-        <img src='/myself.jpg' width='150px' alt='Diego Marigno' />
+        <img src='/myself-square.jpg' width='150px' alt='Diego Marigno' />
       </AboutMe>
 
       <h2>Photography</h2>
