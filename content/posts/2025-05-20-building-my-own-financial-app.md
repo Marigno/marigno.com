@@ -91,7 +91,7 @@ This is an ongoing journey, but I'm happy with the progress that I've made so fa
 
 I'm not sure how this app will evolve, but I'm excited to see where it takes me, and where it will take you.
 
-<img src="/images/vissu-portfolio-screenshot.png" alt="Vissu App Portfolio Screenshot" />
+<img src="https://marigno.com/vissu-portfolio-screenshot.png" alt="Vissu App Portfolio Screenshot" />
 
 Knowing where your money is, and how it's being spent, is a great way to start being financially literate. 
 
