@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diego J. Mariño V. — CV 2026</title>
+<base target="_blank">
 
 <!-- SEO / Social sharing -->
 <meta name="description" content="CV de Diego J. Mariño V. — Desarrollador Full Stack y Especialista en Soporte Técnico. React, Next.js, TypeScript, Node.js, PHP.">
@@ -54,6 +55,7 @@
   .page{
     background:#fff;
     width:820px;
+    max-width:100%;
     margin:28px auto;
     padding:54px 56px 60px;
     box-shadow:0 1px 6px rgba(0,0,0,.18);
@@ -132,6 +134,29 @@
   .links a{ color:var(--link); text-decoration:underline; }
   .links .label{ color:var(--muted); }
 
+  /* ---------- Mobile / phone ---------- */
+  @media (max-width:680px){
+    body{ font-size:12.5px; line-height:1.5; }
+    .page{
+      width:auto;
+      margin:14px;
+      padding:26px 22px 32px;
+      box-shadow:0 1px 5px rgba(0,0,0,.15);
+      overflow-wrap:break-word;
+    }
+    .cv-grid{ grid-template-columns:1fr; column-gap:0; }
+    .name{ font-size:30px; }
+    .subtitle{ font-size:14px; }
+    .header-links{ font-size:12px; }
+    h2.sec{ font-size:12.5px; margin:24px 0 12px; }
+    .contact{ padding-top:16px; }
+    .side-col h2.sec{ margin-top:24px; }
+    .entry-title{ font-size:13.5px; }
+    .entry-url{ font-size:12px; }
+    .entry-date{ font-size:11px; }
+    ul.skills{ padding-left:18px; }
+  }
+
   /* ---------- Print ---------- */
   @page{ size:A4; margin:14mm 15mm; }
 
@@ -170,8 +195,10 @@
       <p class="profile">
         Desarrollador full stack con más de 8 años construyendo y manteniendo aplicaciones web.
         Combino desarrollo frontend y backend (React, Next.js, TypeScript, Node.js, PHP) con
-        soporte técnico avanzado de producto. Autodidacta, resolutivo y acostumbrado al trabajo
-        remoto con equipos internacionales. Abierto a colaboraciones y proyectos de desarrollo.
+        soporte técnico avanzado de producto. Diseño e implemento automatizaciones, flujos con IA
+        y agentes para mejorar sistemas y procesos. Autodidacta, resolutivo y acostumbrado al
+        trabajo remoto con equipos internacionales. Abierto a colaboraciones y proyectos de
+        desarrollo.
       </p>
 
       <h2 class="sec">Experiencia</h2>
