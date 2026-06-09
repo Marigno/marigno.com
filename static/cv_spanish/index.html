@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diego J. Mariño V. — CV 2026</title>
+
+<!-- SEO / Social sharing -->
+<meta name="description" content="CV de Diego J. Mariño V. — Desarrollador Full Stack y Especialista en Soporte Técnico. React, Next.js, TypeScript, Node.js, PHP.">
+<link rel="canonical" href="https://marigno.com/cv_spanish">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Diego J. Mariño V. — CV 2026">
+<meta property="og:description" content="Desarrollador Full Stack · Especialista en Soporte Técnico. Más de 8 años construyendo aplicaciones web.">
+<meta property="og:url" content="https://marigno.com/cv_spanish">
+<meta property="og:image" content="https://marigno.com/myself-square.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Diego J. Mariño V. — CV 2026">
+<meta name="twitter:description" content="Desarrollador Full Stack · Especialista en Soporte Técnico.">
+<meta name="twitter:image" content="https://marigno.com/myself-square.jpg">
+
+<!-- Favicons (match the rest of marigno.com) -->
+<link rel="apple-touch-icon" sizes="180x180" href="/logos/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/logos/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/logos/favicon-16x16.png">
+<link rel="icon" href="/logos/favicon.ico">
+
+<style>
+  :root{
+    --blue:#1a73e8;        /* section headers */
+    --link:#1155cc;        /* links */
+    --ink:#202124;         /* near-black text */
+    --body:#3c4043;        /* body text */
+    --muted:#5f6368;       /* dates / secondary */
+    --rule:#dadce0;        /* light dividers */
+    --bg:#fafafa;          /* screen background (matches marigno.com) */
+  }
+
+  *{ box-sizing:border-box; }
+
+  html,body{ margin:0; padding:0; }
+
+  body{
+    background:var(--bg);
+    font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color:var(--body);
+    font-size:11px;
+    line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  /* ---------- Page card (screen) ---------- */
+  .page{
+    background:#fff;
+    width:820px;
+    margin:28px auto;
+    padding:54px 56px 60px;
+    box-shadow:0 1px 6px rgba(0,0,0,.18);
+  }
+
+  /* ---------- Two-column grid ---------- */
+  .cv-grid{
+    display:grid;
+    grid-template-columns:1.65fr 1fr;
+    column-gap:44px;
+    align-items:start;
+  }
+  .main-col > *:first-child,
+  .side-col > *:first-child{ margin-top:0; }
+
+  /* ---------- Name / header block ---------- */
+  .name{
+    font-size:42px;
+    font-weight:400;
+    color:var(--ink);
+    line-height:1.05;
+    letter-spacing:-.5px;
+    margin:0 0 6px;
+  }
+  .subtitle{
+    font-size:15px;
+    color:var(--body);
+    margin:0 0 4px;
+  }
+  .header-links{ font-size:11px; margin:0; }
+  .header-links a{ color:var(--link); text-decoration:underline; }
+
+  /* ---------- Contact block (sidebar top) ---------- */
+  .contact{ margin-bottom:4px; padding-top:8px; }
+  .contact p{ margin:0 0 2px; color:var(--body); }
+  .contact .strong{ color:var(--ink); font-weight:700; }
+  .contact a{ color:var(--link); text-decoration:underline; }
+
+  /* ---------- Section headers ---------- */
+  h2.sec{
+    color:var(--blue);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    margin:22px 0 12px;
+    padding-bottom:0;
+  }
+  .side-col h2.sec{ margin-top:26px; }
+
+  /* ---------- Experience / project entries ---------- */
+  .entry{ margin-bottom:14px; break-inside:avoid; }
+  .entry-title{
+    font-size:12.5px;
+    color:var(--muted);
+    font-weight:400;
+    margin:0;
+    line-height:1.3;
+  }
+  .entry-title b{ color:var(--ink); font-weight:700; }
+  .entry-url{ font-size:10.5px; margin:1px 0 0; }
+  .entry-url a{ color:var(--link); text-decoration:underline; }
+  .entry-date{ font-size:10px; color:var(--muted); margin:1px 0 3px; }
+  .entry p.desc{ margin:0; color:var(--body); }
+
+  /* ---------- Profile ---------- */
+  .profile{ margin:0; color:var(--body); }
+
+  /* ---------- Sidebar lists ---------- */
+  ul.skills{ margin:0; padding-left:15px; }
+  ul.skills li{ margin-bottom:5px; color:var(--body); }
+  ul.skills li b{ color:var(--ink); font-weight:700; }
+
+  .langs p, .links p{ margin:0 0 4px; color:var(--body); }
+  .langs .lang-name{ color:var(--ink); font-weight:700; }
+  .links a{ color:var(--link); text-decoration:underline; }
+  .links .label{ color:var(--muted); }
+
+  /* ---------- Print ---------- */
+  @page{ size:A4; margin:14mm 15mm; }
+
+  @media print{
+    body{ background:#fff; font-size:10.3px; }
+    .page{
+      width:auto;
+      margin:0;
+      padding:0;
+      box-shadow:none;
+    }
+    .name{ font-size:38px; }
+    .entry, .sec, .contact{ break-inside:avoid; }
+    h2.sec{ break-after:avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="cv-grid">
+
+    <!-- ============ MAIN COLUMN ============ -->
+    <div class="main-col">
+
+      <header>
+        <h1 class="name">Diego J. Mariño V.</h1>
+        <p class="subtitle">Desarrollador Full Stack &middot; Especialista en Soporte Técnico</p>
+        <p class="header-links">
+          <a href="https://www.linkedin.com/in/diego-marigno">linkedin.com/in/diego-marigno</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://www.marigno.com">marigno.com</a>
+        </p>
+      </header>
+
+      <h2 class="sec">Perfil</h2>
+      <p class="profile">
+        Desarrollador full stack con más de 8 años construyendo y manteniendo aplicaciones web.
+        Combino desarrollo frontend y backend (React, Next.js, TypeScript, Node.js, PHP) con
+        soporte técnico avanzado de producto. Autodidacta, resolutivo y acostumbrado al trabajo
+        remoto con equipos internacionales. Abierto a colaboraciones y proyectos de desarrollo.
+      </p>
+
+      <h2 class="sec">Experiencia</h2>
+
+      <div class="entry">
+        <p class="entry-title"><b>Soflyy</b> (WP All Import / WP All Export), Remoto — Especialista en Soporte Técnico y Desarrollador</p>
+        <p class="entry-url"><a href="https://www.wpallimport.com/">www.wpallimport.com</a></p>
+        <p class="entry-date">Abril 2020 – Actualidad</p>
+        <p class="desc">Soporte técnico avanzado y desarrollo de los plugins WP All Import y WP All Export:
+        corrección de errores, creación de add-ons, traducciones y mejoras internas con PHP, JavaScript,
+        React y Next.js. Optimización de los flujos de soporte con herramientas de IA y automatización.
+        También colaboro en otros productos de Soflyy (Breakdance, Oxygen, AnalyticsWP, WPCodeBox).</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-title"><b>WPCodeBox</b>, Remoto — Especialista en Proyectos / Desarrollo Web</p>
+        <p class="entry-url"><a href="https://wpcodebox.com/">wpcodebox.com</a></p>
+        <p class="entry-date">Diciembre 2024 – Actualidad</p>
+        <p class="desc">Desarrollo y mantenimiento de los recursos web del producto, ejecución de
+        proyectos secundarios, producción de contenido y SEO técnico.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-title"><b>Freelance</b>, Remoto — Desarrollador Web</p>
+        <p class="entry-date">Enero 2016 – Abril 2020</p>
+        <p class="desc">Desarrollo frontend y full stack para clientes de distintos países (+10 proyectos)
+        con PHP, JavaScript, HTML, CSS y CMS como WordPress, incluyendo configuración de hosting,
+        dominios y mantenimiento técnico.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-title"><b>Sutherland Global Services</b>, Bogotá, Colombia — Agente de Soporte Técnico (AT&amp;T)</p>
+        <p class="entry-date">Marzo 2017 – Julio 2018</p>
+        <p class="desc">Soporte técnico a clientes de AT&amp;T: diagnóstico, cambios de cuenta y resolución
+        de incidencias bajo presión, afinando comunicación y resolución de problemas.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-title"><b>Cloudworkers</b>, Remoto — Especialista en Soporte / Moderación</p>
+        <p class="entry-date">Julio 2018 – Mayo 2020</p>
+        <p class="desc">Soporte operativo y técnico a equipos dentro de una plataforma de moderación,
+        con resolución de incidencias y seguimiento de casos.</p>
+      </div>
+
+      <h2 class="sec">Proyectos</h2>
+
+      <div class="entry">
+        <p class="entry-title"><b>Vissu Finances</b> — App full stack de finanzas personales</p>
+        <p class="entry-url"><a href="https://vissu.app/">vissu.app</a></p>
+        <p class="entry-date">2022 – Actualidad</p>
+        <p class="desc">React, Next.js y TypeScript con Supabase, Stripe, Chakra UI, SWR, Zod, Chart.js
+        y PostHog; desplegada en Vercel con pruebas en Vitest y ESLint.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-title"><b>Valquiria</b> — Bot de Telegram &harr; API de Binance</p>
+        <p class="entry-date">2026</p>
+        <p class="desc">Bot construido con Node.js, grammY y SQLite en TypeScript.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-title"><b>Flora</b> — App móvil de entrenamientos personalizados <span style="color:var(--muted)">(en desarrollo)</span></p>
+        <p class="entry-date">2026</p>
+        <p class="desc">Aplicación móvil en Swift y SwiftUI.</p>
+      </div>
+
+      <div class="entry">
+        <p class="desc"><b style="color:var(--ink)">Otros:</b> blog personal en Gatsby + React (marigno.com),
+        Digitalize (Python + Swift) y múltiples tiendas y sitios corporativos en WordPress / Shopify (2016–2024).</p>
+      </div>
+
+      <h2 class="sec">Educación</h2>
+
+      <div class="entry">
+        <p class="entry-title"><b>Universidad Nacional Experimental del Táchira (UNET)</b> — Ingeniería en Informática</p>
+        <p class="entry-date">San Cristóbal, Venezuela &middot; 2010 – 2013</p>
+        <p class="desc">Programación (C, C++, Java), estructuras de datos, redes, infraestructura y soporte
+        técnico. Cursada hasta el 4.º semestre.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-title"><b>Desarrollo Web Autodidacta</b></p>
+        <p class="entry-date">2016 – Actualidad</p>
+        <p class="desc">Formación continua en React, Next.js, TypeScript, PHP, SQL, IA aplicada, SEO técnico
+        y buenas prácticas (testing, Git).</p>
+      </div>
+
+    </div>
+
+    <!-- ============ SIDEBAR ============ -->
+    <div class="side-col">
+
+      <div class="contact">
+        <p class="strong">Caracas, Venezuela</p>
+        <p class="strong">+58 422 748 7386</p>
+        <p><a href="mailto:diego@marigno.com">diego@marigno.com</a></p>
+        <p><a href="https://www.linkedin.com/in/diego-marigno">linkedin.com/in/diego-marigno</a></p>
+      </div>
+
+      <h2 class="sec">Habilidades</h2>
+      <ul class="skills">
+        <li><b>Frontend:</b> React, Next.js, TypeScript, JavaScript, HTML, CSS</li>
+        <li><b>Backend:</b> Node.js, PHP, SQL / SQLite, APIs REST</li>
+        <li><b>Plataformas:</b> WordPress, Supabase, Vercel, Stripe</li>
+        <li><b>Herramientas:</b> Git, Vitest, ESLint, debugging, QA</li>
+        <li><b>Otros:</b> Solidity, Python, Swift / SwiftUI</li>
+        <li>SEO técnico, analítica e IA aplicada</li>
+      </ul>
+
+      <h2 class="sec">Idiomas</h2>
+      <div class="langs">
+        <p><span class="lang-name">Español</span>, Nativo</p>
+        <p><span class="lang-name">Inglés</span>, C1</p>
+        <p><span class="lang-name">Francés</span>, B2</p>
+        <p><span class="lang-name">Italiano</span>, A2</p>
+        <p><span class="lang-name">Portugués</span>, A1</p>
+      </div>
+
+      <h2 class="sec">Enlaces</h2>
+      <div class="links">
+        <p><span class="label">Portafolio:</span> <a href="https://www.marigno.com">marigno.com</a></p>
+        <p><span class="label">Proyecto:</span> <a href="https://vissu.app/">vissu.app</a></p>
+        <p><span class="label">LinkedIn:</span> <a href="https://www.linkedin.com/in/diego-marigno">in/diego-marigno</a></p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
