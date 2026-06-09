@@ -85,6 +85,7 @@
     color:var(--body);
     margin:0 0 4px;
   }
+  .subtitle .sub-break{ display:none; }   /* desktop: keep on one line */
   .header-links{ font-size:11px; margin:0; }
   .header-links a{ color:var(--link); text-decoration:underline; }
 
@@ -147,6 +148,8 @@
     .cv-grid{ grid-template-columns:1fr; column-gap:0; }
     .name{ font-size:30px; }
     .subtitle{ font-size:14px; }
+    .subtitle .sub-break{ display:inline; }  /* mobile: one role per line */
+    .subtitle .sub-sep{ display:none; }      /* drop the dangling middot */
     .header-links{ font-size:12px; }
     h2.sec{ font-size:12.5px; margin:24px 0 12px; }
     .contact{ padding-top:16px; }
@@ -183,7 +186,7 @@
 
       <header>
         <h1 class="name">Diego J. Mariño V.</h1>
-        <p class="subtitle">Desarrollador Full Stack &middot; Especialista en Soporte Técnico</p>
+        <p class="subtitle">Desarrollador Full Stack<span class="sub-sep"> &middot; </span><br class="sub-break">Especialista en Soporte Técnico</p>
         <p class="header-links">
           <a href="https://www.linkedin.com/in/diego-marigno">linkedin.com/in/diego-marigno</a>
           &nbsp;&middot;&nbsp;
