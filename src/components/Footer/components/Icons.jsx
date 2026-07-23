@@ -17,6 +17,40 @@ export const GithubIcon = () => (
   </svg>
 );
 
+export const LinkedinIcon = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='1em'
+    height='1em'
+    viewBox='0 0 24 24'
+    fill='none'
+    stroke='currentColor'
+    strokeWidth='2'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+  >
+    <path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v1.57A6 6 0 0 1 16 8z' />
+    <rect x='2' y='9' width='4' height='12' />
+    <circle cx='4' cy='4' r='2' />
+  </svg>
+);
+
+export const VissuIcon = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='1em'
+    height='1em'
+    viewBox='0 0 24 24'
+    fill='none'
+    stroke='currentColor'
+    strokeWidth='2'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+  >
+    <path d='M4 5l8 14 8-14' />
+  </svg>
+);
+
 export const TwitterIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="18px" height="18px" viewBox="0 0 24 24" style={{enableBackground:"new 0 0 24 24"}} xmlSpace="preserve"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg>
 );

@@ -5,6 +5,11 @@ import Layout from "../layout/Layout";
 import styled from "@emotion/styled";
 
 import config from "../../data/SiteConfig";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  VissuIcon,
+} from "../components/Footer/components/Icons";
 
 const LinksHeader = styled.div`
   display: flex;
@@ -16,7 +21,7 @@ const LinksHeader = styled.div`
   img {
     height: 150px;
     width: auto;
-    border-radius: 4px;
+    border-radius: 50%;
     margin-left: 0px;
   }
 `;
@@ -51,14 +56,14 @@ const LinkContent = styled.a`
   border-bottom: none;
   box-shadow: none;
 
-  img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
+  svg {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
   }
 
   p {
-    margin-top: 30px;
+    margin: 0;
   }
 
   &:hover {
@@ -72,35 +77,44 @@ const LinksPage = () => {
       <Helmet title={`Links | ${config.siteTitle}`} />
 
       <LinksHeader>
-        <img src="/myself.png" alt="Diego Marigno" />
+        <img src="/myself.jpg" alt="Diego Marigno" />
         <h1>Diego Marigno</h1>
-        <h2>Artist and polyglot</h2>
-        <p>I capture images of what I like.</p>
+        <h2>Product Engineer</h2>
+        <p>Full-Stack Development &amp; Applied AI</p>
       </LinksHeader>
 
       <LinksContainer>
         <LinkWrapper>
           <LinkContent
-            href="https://opensea.io/collection/zephyrum/"
+            href="https://vissu.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/links/zephyrum.jpg" alt="Zephyrum" />
-            <p>Zephyrum – 1/1s</p>
+            <VissuIcon />
+            <p>Vissu – My Financial App</p>
           </LinkContent>
         </LinkWrapper>
         <LinkWrapper>
           <LinkContent
-            href="https://foundation.app/@marigno"
+            href="https://github.com/marigno"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/links/foundation.jpeg" alt="Foundation" />
-            <p>Foundation</p>
+            <GithubIcon />
+            <p>GitHub</p>
+          </LinkContent>
+        </LinkWrapper>
+        <LinkWrapper>
+          <LinkContent
+            href="https://www.linkedin.com/in/diego-marigno"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedinIcon />
+            <p>LinkedIn</p>
           </LinkContent>
         </LinkWrapper>
       </LinksContainer>
-      <br/>
     </Layout>
   );
 };

@@ -1,6 +1,6 @@
 //data/SiteConfig.js
 const config = {
-    siteTitle: 'Diego Marigno - Artist', // Site title.
+    siteTitle: 'Diego Marigno - Product Engineer', // Site title.
     siteTitleShort: 'Diego Marigno', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
     siteTitleAlt: "Diego Marigno's Site", // Alternative site title for SEO.
     siteLogo: '/logos/logo-512.png', // Logo used for SEO and manifest.
@@ -19,7 +19,7 @@ const config = {
     dateFormat: 'DD/MM/YYYY', // Date format for display.
     userEmail: 'diego@marigno.com', // Email used for RSS feed's author segment
     userTwitter: 'diegomarigno', // Optionally renders "Follow Me" in the UserInfo segment.
-    userAvatar: '/myself.png', // User avatar to display in the author segment.
+    userAvatar: '/myself.jpg', // User avatar to display in the author segment.
     themeColor: '#fff', // Used for setting manifest and progress theme colors.
     backgroundColor: '#fff', // Used for setting manifest background color.
     repo: 'https://github.com/Marigno/marigno.com',
