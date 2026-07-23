@@ -69,6 +69,9 @@
     "stylelint-config-standard": "^32.0.0",
     "write-good": "^1.0.8"
   },
+  "overrides": {
+    "msgpackr": "^1.11.2"
+  },
   "keywords": [
     "gatsby"
   ],
