@@ -1,0 +1,5 @@
+[build.environment]
+  # Node 18.20.x = last LTS patch of the 18 line (same major the site has
+  # always built on), ships npm 10 whose resolver doesn't loop on this
+  # dependency tree the way npm 8.9 (Node 18.2.0) does.
+  NODE_VERSION = "18.20"
