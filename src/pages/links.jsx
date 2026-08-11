@@ -8,6 +8,7 @@ import config from "../../data/SiteConfig";
 import {
   GithubIcon,
   LinkedinIcon,
+  RssIcon,
   VissuIcon,
 } from "../components/Footer/components/Icons";
 
@@ -84,6 +85,12 @@ const LinksPage = () => {
       </LinksHeader>
 
       <LinksContainer>
+        <LinkWrapper>
+          <LinkContent href="/">
+            <RssIcon />
+            <p>My blog</p>
+          </LinkContent>
+        </LinkWrapper>
         <LinkWrapper>
           <LinkContent
             href="https://vissu.app/"
